@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family     : Arial, Helvetica, sans-serif, 'Microsoft Yahei';
+    line-height     : 1.42857143;
+    font-weight     : 500;
+    background-color: var(--primary-background-color);
+}
+
+section {
+    padding-top: 60px;
+}
+
+:root {
+    --primary-gradient-background-color: linear-gradient(#6190E8, #A7BFE8);
+    --primary-background-color         : rgb(245, 245, 245);
+}
+
+.hide-text {
+    display    : block;
+    overflow   : hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    font-size  : 0px;
+}
+
+a {
+    color: black;
+}
+
+.container {
+    max-width: 1320px;
+    margin   : 0 auto;
+}
+
+.list-unstyled {
+    list-style: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    gap    : 20px;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+/* material-button */
+
+/* font-size */
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+/* material-btn */
+.btn {
+    font-size    : 24px;
+    padding      : 10px 15px;
+    border-radius: 2px;
+    box-shadow   : 0px 1px 4px black;
+    color        : white;
+    overflow     : hidden;
+    position     : relative;
+    outline      : transparent;
+    border       : transparent;
+}
+
+.btn::before {
+    content         : "";
+    position        : absolute;
+    top             : 50%;
+    left            : 50%;
+    transform       : translate(-50%, -50%);
+    border-radius   : 100%;
+    width           : 0;
+    height          : 0;
+    background-color: rgba(245, 245, 245, .3);
+    display         : block;
+}
+
+.btn:active::before {
+    width     : 150%;
+    height    : 150%;
+    transition: .2s ease-out;
+}
+
+.btn-black {
+    background-color: #555555;
+    transition      : background-color .5s;
+}
+
+.btn-black:hover,
+.btn-black:focus {
+    background-color: #000000;
+}

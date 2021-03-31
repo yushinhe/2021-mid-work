@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'
+        integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=='
+        crossorigin='anonymous' />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" type="image/x-icon" href="./img/icon3.ico">
+    <link rel="stylesheet" href="./utility.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="main-header ">
+        <nav class="main-nav container d-flex justify-content-between">
+            <a class="d-flex" href="#">
+                <h1 class="hide-text title">太公望書林</h1>
+                <img src="./img/logo4.png" class="logo" alt="">
+            </a>
+            <ul class="d-flex align-items-center">
+                <li><a class="text-decoration-none " href="#">來讀書吧</a></li>
+                <li><a class="text-decoration-none " href="#">講座介紹</a></li>
+                <!-- <li><a class="text-decoration-none" href="#">好文分享</a></li> -->
+                <li class="list-unstyled"><a href="#"><i class="far fa-user "></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="bg"></div>
+        <div class="container grid">
+            <div class="info">
+                <h2>書中自有黃金屋</h2>
+                <p>太公望書林提供了很多能豐富精神的書籍，我們希望我們的讀者讀了我們的書之後，除了能擁有物質上的黃金屋，也能在書中探索到自己心中的黃金屋</p>
+                <a href="#" class="btn btn-black"> 立刻選書 &nbsp; <i class="fas fa-chevron-right"></i></a>
+
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./product-img/book2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./product-img/book3.png" alt=""></a></div>
+                    <div class="swiper-slide"><img src="./product-img/book4.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./product-img/book5.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./product-img/book6.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./product-img/book7.png" alt=""></div>
+                </div>
+            </div>
+            <div class="sci"></div>
+        </div>
+
+    </section>
+    <div id="intro">
+        <div class="intro-txt">
+            <h3 class="hide">
+                <span class="txt">
+                    人的成長就是戰勝過去
+                </span>
+            </h3>
+            <h3 class="hide">
+                <span class="txt">
+                    不成熟的自己
+                </span>
+            </h3>
+            <h3 class="hide">
+                <span class="txt">
+                    —迪亞布羅
+                </span>
+            </h3>
+        </div>
+    </div>
+
+    <div id="slider"></div>
+    <section class="recommand">
+        <div class="container">
+            <h2>暢銷熱賣</h2>
+            <div class="card-group">
+                <a href="#" class="card">
+                    <div class="card-bg"></div>
+                    <p class="price">$300</p>
+                    <img src="./product-img/book2.png" alt="">
+                    <div class="info">
+                        <h5>器物的象徵: 佛教打造的中國物質世界</h5>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <p class="price">$300</p>
+                    <img src="./product-img/book3.png" alt="">
+                    <div class="info">
+                        <h5>征服的時代: 從亞歷山大到哈德良的希臘世界</h5>
+                    </div>
+                </a> <a href="#" class="card">
+                    <p class="price">$300</p>
+                    <img src="./product-img/book4.png" alt="">
+                    <div class="info">
+                        <h5>埃及五千年：文明起源與王朝興衰的故事</h5>
+                    </div>
+                </a> <a href="#" class="card">
+                    <p class="price">$300</p>
+                    <img src="./product-img/book6.png" alt="">
+                    <div class="info">
+                        <h5>從臺車到巴士：百年臺灣地方交通演進史</h5>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            autoplay: {
+                delay: 1000,
+                speed: 400,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            max-width: 1320px;
+            margin: auto;
+        }
+
+        .recommand h2 {
+            position: relative;
+        }
+
+        .recommand h2::before {
+            content: "";
+            position: absolute;
+            left: -50%;
+            bottom: -.5rem;
+            width: 68%;
+            height: 2px;
+            background-color: black;
+        }
+
+        .recommand h2::after {
+            content: "";
+            position: absolute;
+            left: 17.5%;
+            bottom: -.75rem;
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        .recommand .card-group {
+            padding: 0 30px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px;
+        }
+
+        .recommand .card {
+            border-radius: 30px;
+            box-shadow: 0px 20px 20px rgba(0, 0, 0, .2), 0px 0px 50px rgba(0, 0, 0, .2);
+            position: relative;
+            padding: 1rem;
+            transition: 1s;
+            overflow: hidden;
+            display: block;
+            color: black;
+            text-decoration: black;
+        }
+
+        .recommand .card::before {
+            content: '';
+            background-color: #A7BFE8;
+            position: absolute;
+            top: -50%;
+            left: 0;
+            width: 101%;
+            height: 100%;
+            z-index: -1;
+            transform: skewY(165deg);
+            transition: .5s;
+        }
+
+        .recommand .card:hover::before {
+            top: -70%;
+            transform: skewY(210deg);
+        }
+
+        .recommand .card img {
+            width: 60%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .recommand .card.info {
+            transform: translateZ(0px);
+            transition: .5s;
+        }
+
+        .recommand .card:hover .info {
+            transform: translateZ(40px);
+        }
+
+        .recommand .card h3 {
+            margin: .5rem;
+        }
+
+        .recommand .card>div {
+            padding: 0 10%;
+        }
+
+        .recommand .card .price {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(236, 239, 241, .7);
+            padding: .8rem;
+            box-sizing: border-box;
+            margin: 0;
+            overflow: hidden;
+            border-radius: 30px 0 30px 0;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="recommand">
+        <div class="wrapper">
+            <h2 style="font-size: 48px;">暢銷熱賣</h2>
+            <div class="card-group">
+                <a href="#" class="card">
+                    <p class="price">$300</p>
+                    <img src="./product-img/book2.png" alt="">
+                    <div class="info">
+                        <h3>器物的象徵: 佛教打造的中國物質世界</h3>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <p class="price">$300</p>
+                    <img src="./product-img/book3.png" alt="">
+                    <div class="info">
+                        <h3>征服的時代: 從亞歷山大到哈德良的希臘世界</h3>
+                    </div>
+                </a> <a href="#" class="card">
+                    <p class="price">$300</p>
+                    <img src="./product-img/book4.png" alt="">
+                    <div class="info">
+                        <h3>埃及五千年：文明起源與王朝興衰的故事</h3>
+                    </div>
+                </a> <a href="#" class="card">
+                    <p class="price">$300</p>
+                    <img src="./product-img/book6.png" alt="">
+                    <div class="info">
+                        <h3>從臺車到巴士：百年臺灣地方交通演進史</h3>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

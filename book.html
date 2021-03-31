@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1320px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0 auto;
+            gap: 60px;
+        }
+
+        .card {
+            width: 100%;
+            position: relative;
+            background: #fff;
+            transform-style: preserve-3d;
+            transform: perspective(2000px);
+            transition: 1s;
+            box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5);
+        }
+
+        .card:hover {
+            transform: perspective(2000px)rotate(-10deg)      translateX(3rem);;
+            box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5);
+        }
+
+        .card .imgBox {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            transform-origin: left;
+            z-index: 1;
+            transition: 1s;
+            overflow: hidden;
+        }
+
+        .card:hover .imgBox {
+            transform: rotateY(-110deg)
+      
+        }
+        .card:nth-of-type(1):hover .imgBox {
+            transform: rotateY(-100deg);
+        }
+        img {
+            width: 100%;
+        }
+
+        .card .details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="imgBox"><img src="./active-img/active1.png" alt=""></div>
+            <div class="details">
+                <h4>印尼排華</h4>
+                <h5>活動日期 2021/07/13</h5>
+                <p>此次演講榮幸請到查昕教授與大家討論有關印尼獨立後初期排華事件</p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBox"><img src="./active-img/active4.png" alt=""></div>
+            <div class="details">
+                <h4>清末煙畫</h4>
+                <h5>活動日期 2021/07/20</h5>
+                <p>此次演講榮幸請到何淑宜教授與大家討論有關新型媒體對於民眾閱讀起到的作用</p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBox"><img src="./active-img/active3.png" alt=""></div>
+            <div class="details">
+                <h4>國共內戰風雲</h4>
+                <h5>活動日期 2021/07/30</h5>
+                <p>此次演講榮幸請到楊子政教授與大家討論戴戎光叛變事件</p>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
