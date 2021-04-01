@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 320px;
+            height: 165px;
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .image-container-before {
+            width: 160px;
+        }
+
+        .image-container-before,
+        .image-container-after {
+            position: absolute;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider {
+            width: 0.5rem;
+            background-color: white;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 100px;
+            transform: translateX(-50%);
+            z-index: 20;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-container-after">
+            <img class="after" src="./active-img/active2.png" alt="">
+        </div>
+        <div class="image-container-before">
+            <img class="before" src="./active-img/active3.png" alt="">
+        </div>
+        <div class="slider"></div>
+    </div>
+    <script>
+        const slider = document.querySelector('.slider')
+        const before = document.querySelector('.image-container-before')
+        const after = document.querySelector('.image-container-after')
+        const container = document.querySelector(".container")
+        const dragyoass = (e) => {
+            let xPos = e.layerX;
+            console.log(xPos);
+            let size = container.offsetWidth;
+            console.log(size);
+            console.log(slider.style.left);
+            before.style.width = xPos + "px";
+            console.log(before.style.width);
+            slider.style.left = xPos + "px";
+            if (xPos < 5) {
+                before.style.width = 0;
+                slider.style.left = 0;
+            }
+            if (xPos + 5 > size) {
+                before.style.width = size + "px";
+                slider.style.left = size + "px";
+            }
+        }
+        console.log(slider.style.left);
+
+        container.addEventListener("mousemove", dragyoass)
+    </script>
+</body>
+
+</html>
