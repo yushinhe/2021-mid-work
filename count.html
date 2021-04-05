@@ -7,34 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        ul {
-            display: flex;
-        }
+    button,input{
+        margin: 0;
+    }
+    div{
+        font-size: 0;
+    }
     </style>
 </head>
 
 <body>
-    <button id="subtraction">-</button><input type="text" value="1" name="" id="amount"><button id="plus">+</button>
-    <div id="max">123</div>
+    <div>
+    <button id="subtraction">-</button>
+    <input type='number' max="20" min="1" value="1" name="" id="amount">
+    <button id="plus">+</button></div>
     <script>
         let amount = document.getElementById('amount')
         let amountValue = parseInt(amount.value)
         let subtraction = document.getElementById('subtraction')
         let plus = document.getElementById('plus')
-        let max = document.getElementById('max')
-        console.log(subtraction.disabled);
-        if (amount.value >= 20) plus.disabled = true;
-        if (amount.value <= 1) subtraction.disabled = true;
         function amountSub() {
-            console.log(amount.value );
             amount.value = amountValue--;
+            if (amount.value < 20) plus.disabled = false;
+            if (amount.value <= 1) subtraction.disabled = true;
+            return;
         }
         function amountPlus() {
             amount.value = amountValue++;
+            if (amount.value >= 20) plus.disabled = true;
+            if (amount.value > 1) subtraction.disabled = false;
+            return;
         }
-        subtraction.addEventListener('click', amountSub)
-        plus.addEventListener('click', amountPlus)
-        console.log(typeof (amount));
+
+        subtraction.addEventListener('click', amountSub);
+        plus.addEventListener('click', amountPlus);
     </script>
 </body>
 

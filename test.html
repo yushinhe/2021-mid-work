@@ -59,10 +59,15 @@
 <body>
     <form action="">
         <div class="input-field">
-            <input type="text" id="name" required />
+            <input type="text" id="name" value="123" required />
             <label for="name">Your name:</label>
+            <div id="mumi">123</div>
         </div>
     </form>
+    <script>
+        let name= document.getElementById('mumi')
+        console.log(name.innerText);
+    </script>
 </body>
 
 </html>
