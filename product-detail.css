@@ -1,0 +1,20 @@
+.product-info {}
+
+.product-info .grid {
+    grid-template-columns: 2fr 3fr;
+}
+
+.product-info .info-group {
+    padding: 30px;
+}
+
+.product-info img {
+  width: 460px;
+  height: 540px;
+}
+
+.product-info .info-group h2,
+.product-info .info-group h3,
+.product-info .info-group h4 {
+    margin-bottom: 1em;
+}

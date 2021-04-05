@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="subtraction">-</button><input type="text" value="1" name="" id="amount"><button id="plus">+</button>
+    <div id="max">123</div>
+    <script>
+        let amount = document.getElementById('amount')
+        let amountValue = parseInt(amount.value)
+        let subtraction = document.getElementById('subtraction')
+        let plus = document.getElementById('plus')
+        let max = document.getElementById('max')
+        console.log(subtraction.disabled);
+        if (amount.value >= 20) plus.disabled = true;
+        if (amount.value <= 1) subtraction.disabled = true;
+        function amountSub() {
+            console.log(amount.value );
+            amount.value = amountValue--;
+        }
+        function amountPlus() {
+            amount.value = amountValue++;
+        }
+        subtraction.addEventListener('click', amountSub)
+        plus.addEventListener('click', amountPlus)
+        console.log(typeof (amount));
+    </script>
+</body>
+
+</html>
