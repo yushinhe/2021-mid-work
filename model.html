@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'
+        integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=='
+        crossorigin='anonymous' />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #777;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background-color: aquamarine;
+        }
+
+        .wrapper {
+            max-width: 1320px;
+            margin: 30px auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        button {
+            cursor: pointer;
+            margin: 1.5rem .5rem 0;
+
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 20px 20px rgba(0, 0, 0, .2), 0px 0px 50px rgba(0, 0, 0, .2);
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s opacity .5s;
+        }
+
+        .modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modal form {
+            padding: 2rem;
+        }
+
+        .modal.input-field {
+            position: relative;
+        }
+
+        .modal input {
+            border: 0;
+            border-bottom: 1px #777 solid;
+            font-size: 16px;
+            padding: .3rem;
+            margin-top: 1.5rem;
+            outline: 0;
+
+        }
+
+        .modal input:focus~label,
+        .modal input:valid~label {
+            transform: translateY(-20px);
+            font-size: 14px;
+            transition: .5s;
+        }
+
+        .modal .input-field label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 20px;
+            padding: .3rem;
+        }
+
+        .modal-close {
+            font-size: 16px;
+            position: absolute;
+            right: .5rem;
+            top: .5rem;
+            cursor: pointer;
+        }
+
+        .modal .forget {
+            text-decoration: underline;
+            cursor: pointer;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="wrapper">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptates adipisci aliquid quae sint,
+            molestiae odit asperiores aspernatur alias magnam qui? Delectus consectetur sint adipisci vero nulla ea
+            aliquam culpa?</p>
+        <button id="to-log">click</button>
+    </div>
+
+    <div class="modal" id="log">
+        <form action="">
+            <div class="input-field">
+                <input type="email" id="e-mail" required placeholder="帳號"/>
+     
+            </div>
+            <div class="input-field">
+                <input type="password" id="password" required placeholder="密碼" />
+                
+            </div>
+            <button type="submit">登入</button>
+            <div class="forget">忘記密碼</div>
+            <i class="fas fa-times modal-close"></i>
+        </form>
+
+    </div>
+    <script>
+        let toLog = document.getElementById('to-log')
+        let log = document.getElementById('log')
+        let modalClose = document.querySelector('.modal-close')
+        function logInterface() {
+            log.classList.add('active')
+        }
+        function closeModal() {
+            log.classList.remove('active')
+
+        }
+        toLog.addEventListener('click', logInterface);
+        modalClose.addEventListener('click', closeModal)
+    </script>
+</body>
+
+</html>

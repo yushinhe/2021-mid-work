@@ -28,34 +28,19 @@
 
 /* footer */
 .main-footer {
-    background-color: #A7BFE8;
+    background-color: var(--dark-background-color);
     padding         : 20px;
 }
 
-.main-footer>div {
-    grid-template-columns: repeat(2, 1fr);
+.main-footer ul {
+    text-align: center;
 }
 
 .main-footer ul a {
     font-size: 24px;
 }
 
-.icon i {
-    padding  : 10px 10px 0;
-    font-size: 24px;
-}
 
-.icon i:nth-of-type(1):hover {
-    color: #3b5998;
-}
-
-.icon i:nth-of-type(2):hover {
-    color: #00b900;
-}
-
-.icon i:nth-of-type(3):hover {
-    color: #00acee;
-}
 
 .main-footer>p {
     padding: 10px;
@@ -65,26 +50,29 @@
 .hero {
     background: var(--primary-background-color);
     width     : 100%;
+    height    : 100vh;
     display   : flex;
     position  : relative;
     padding   : 150px 0;
 }
 
 
-.hero>div:nth-of-type(2) {
+.hero .grid {
     grid-template-columns: 2fr 3fr;
     gap                  : 60px;
+    position             : relative;
 }
 
 .hero .bg {
-    position  : absolute;
-    top       : 0;
-    left      : 0;
-    width     : 100%;
-    height    : 100%;
-    background: var(--primary-gradient-background-color);
-    opacity   : .3;
-    clip-path : circle(70% at right -20%);
+    position         : absolute;
+    top              : 0;
+    left             : 0;
+    width            : 100%;
+    height           : 100%;
+    background       : var(--primary-gradient-background-color);
+    opacity          : .3;
+    clip-path        : circle(70% at right -20%);
+    -webkit-clip-path: circle(70% at right -20%);
 }
 
 .hero h2,
@@ -104,12 +92,32 @@
 }
 
 .hero .btn {
-    width          : 50%;
+    width          : 200px;
     text-align     : center;
     margin-top     : 40px;
     display        : block;
     text-decoration: none;
 }
+
+.hero .icon {
+    position: absolute;
+    bottom  : -3rem;
+    left    : 50px;
+    color   : black;
+}
+
+.hero .icon i {
+    padding   : 10px 10px 0;
+    font-size : 40px;
+    transform : translate(0);
+    transition: .25s;
+}
+
+.hero .icon i:hover {
+    color    : #6190E8;
+    transform: translateY(-50%);
+}
+
 
 /* slider */
 
@@ -152,7 +160,7 @@
     width           : 100%;
     height          : 100vh;
     background-color: var(--primary-background-color);
-    opacity: 0;
+    opacity         : 0;
     transform       : translateY(100%);
     z-index         : 10;
 }
@@ -178,31 +186,144 @@
     float: right;
 }
 
+/* service */
+.service {
+    background-color: #e7ecef;
+    padding: 0;
+}
+
+.service .item-group {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+}
+
+.service .item {
+    padding: 2rem 4rem;
+}
+
+.service .item img {
+    display: block;
+    margin : 0 auto;
+    width  : 40px;
+}
+
+.service .item h3 {
+    text-align: center;
+}
+.service .item ul{
+    padding-top:1rem ;
+}
+.service .item li{
+   padding: .5rem 0 0;
+   font-size: 18px;
+   list-style-type:square;
+   position: relative;
+}
+.service .item+ .service .item{
+    border-left: 1px black dotted;
+}
+/* knowledge */
+
+.knowledge .grid {
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+    background           : linear-gradient(to top, #6190E8, #A7BFE8);
+    padding              : 1rem 2rem;
+    margin               : 30px 0 60px;
+    border-radius        : 2px;
+}
+
+.knowledge img {
+    width: 80%;
+}
+
+.knowledge .intro {
+    padding    : 2rem 0;
+    line-height: 1.4;
+}
+
+.knowledge .intro>* {
+    margin-bottom: 1rem;
+}
+
+.knowledge h3 {
+    color    : #333;
+    font-size: 30px;
+}
+
+.knowledge h4 {
+    font-size: 22px;
+}
+
+.knowledge p {
+    font-weight: 500;
+    text-indent: 2em;
+    font-size  : 18px;
+}
+
+.knowledge .btn {
+    text-align     : center;
+    margin         : 40px 0 0 auto;
+    width          : 200px;
+    font-size      : 20px;
+    display        : block;
+    text-decoration: none;
+}
+
 /* recommand */
-.recommand h2 {
+
+.recommand,
+.active,
+.slogan {
+    padding-bottom: 60px;
+}
+
+.knowledge h2,
+.recommand h2,
+.active h2 {
     position     : relative;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.recommand h2::before {
+.knowledge h2::before,
+.recommand h2::before,
+.active h2::before {
     content         : "";
     position        : absolute;
-    left            : -50%;
     bottom          : -.5rem;
-    width           : 68%;
-    height          : 2px;
-    background-color: black;
+    left            : -30%;
+    background-color: #b2b2b2;
+    height          : 3px;
+    width           : 45%;
 }
 
-.recommand h2::after {
-    content         : "";
+.knowledge h2::after,
+.recommand h2::after,
+.active h2::after {
+    content          : "";
+    position         : absolute;
+    bottom           : -.9rem;
+    left             : 14.9%;
+    background-color : #b2b2b2;
+    height           : 15px;
+    width            : 15px;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path        : polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.recommand {
+    position: relative;
+}
+
+.recommand .bg {
+    background-color: var(--second-background-color);
     position        : absolute;
-    left            : 17.5%;
-    bottom          : -.75rem;
-    width           : 10px;
-    height          : 10px;
-    background-color: black;
-    clip-path       : polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    z-index         : -1;
 }
 
 .recommand .card-group {
@@ -251,7 +372,7 @@
 
 .recommand .card h5 {
     margin     : .5rem;
-    font-weight: 500;
+    font-weight: 600;
 
 }
 
@@ -269,4 +390,114 @@
     overflow        : hidden;
     border-radius   : 30px 0 30px 0;
     font-weight     : bold;
+}
+
+/* active */
+
+.active .item-group {
+    padding              : 30px;
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap                  : 60px;
+}
+
+.active .card {
+    width          : 100%;
+    position       : relative;
+    background     : #fff;
+    transform-style: preserve-3d;
+    border-radius  : 5px;
+    transform      : perspective(2000px);
+    transition     : 1s;
+    box-shadow     : inset 300px 0 50px rgba(0, 0, 0, .5);
+}
+
+.active .card-info {
+    padding-top: 1rem;
+}
+
+.active .card:hover {
+    transform : perspective(2000px)rotate(0deg) translateX(3rem);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5);
+}
+
+.active .card .imgBox {
+    position        : relative;
+    width           : 100%;
+    height          : 100%;
+    transform-origin: left;
+    z-index         : 1;
+    transition      : 1s;
+    overflow        : hidden;
+    border-radius   : 5px;
+
+}
+
+.active .card:hover .imgBox {
+    transform: rotateY(-180deg)
+}
+
+/* .active .card:nth-of-type(1):hover .imgBox {
+    transform: rotateY(-100deg);
+} */
+
+.active img {
+    width: 100%;
+}
+
+.active .card .details {
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    box-sizing: border-box;
+    padding   : 20px;
+    overflow  : auto;
+    height    : 100%;
+}
+
+.active .card-info {
+    display       : flex;
+    flex-direction: column;
+    padding-right : 1rem;
+}
+
+.active .card-info a {
+    align-self: flex-end;
+    color     : var(--secondary-text-color);
+}
+
+/* slogan */
+.slogan {
+    width                : 100%;
+    position             : relative;
+    height               : 300px;
+    background           : url(./img/bible-839093_1920.png);
+    background-attachment: fixed;
+    display              : flex;
+    align-items          : center;
+    background-size      : cover;
+}
+
+.slogan .bg {
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.slogan .intro {
+    color      : #fff;
+    text-shadow: 0px 0px 5px #000;
+    text-align : center;
+    width      : 100%;
+}
+
+.slogan h2 {
+    font-size: 36px;
+}
+
+.slogan h4 {
+    font-size: 24px;
 }

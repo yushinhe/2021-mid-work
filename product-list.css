@@ -1,0 +1,149 @@
+.banner {
+    width          : 100%;
+    height         : 540px;
+    position       : relative;
+    background     : url(./img/product-bg.png) center center;
+    background-size: cover;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    overflow       : hidden;
+    padding        : 0;
+}
+
+.banner .bg {
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    width          : 100%;
+    height         : 100%;
+    filter         : blur(5px);
+    background     : url(./img/product-bg.png) center center;
+    background-size: cover;
+
+}
+
+.banner h2 {
+    text-shadow   : 0px 0px 5px #000;
+    color         : white;
+    font-size     : 80px;
+    letter-spacing: .5em;
+    font-weight   : 600;
+}
+
+.product-page {
+    display              : grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top           : 60px;
+}
+
+/* sidebar */
+
+.sidebar .form-group {
+    width     : 200px;
+    border-top: 2px solid #ddd;
+}
+
+.sidebar .form-check,
+.sidebar .form-select {
+    width : 200px;
+    margin: .5rem;
+}
+
+.sidebar .form-check input {
+    width : 20px;
+    height: 20px;
+}
+
+.sidebar .form-check label {
+    font-size: 20px;
+}
+
+.sidebar .form-select {
+    border: none;
+}
+
+.sidebar .form-select option,
+.sidebar .form-select {
+    font-size: 20px;
+}
+
+/* product */
+
+
+
+.product h2 {
+    position     : relative;
+    margin-bottom: 1.5rem;
+}
+
+.product {
+    position   : relative;
+    padding-top: 0;
+}
+
+.product .card-group {
+    padding              : 30px;
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap                  : 60px;
+}
+
+.product .card {
+    border-radius   : 30px;
+    box-shadow      : 0px 20px 20px rgba(0, 0, 0, .2), 0px 0px 50px rgba(0, 0, 0, .2);
+    position        : relative;
+    padding         : 1rem;
+    transition      : 1s;
+    overflow        : hidden;
+    display         : block;
+    color           : black;
+    text-decoration : none;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.product .card::before {
+    content         : '';
+    background-color: #A7BFE8;
+    position        : absolute;
+    top             : -50%;
+    left            : 0;
+    width           : 101%;
+    height          : 100%;
+    z-index         : -1;
+    transform       : skewY(165deg);
+    transition      : .5s;
+}
+
+.product .card:hover::before {
+    top      : -70%;
+    transform: skewY(210deg);
+}
+
+.product .card img {
+    width  : 60%;
+    display: block;
+    margin : 0 auto;
+}
+
+.product .card h5 {
+    margin     : .5rem;
+    font-weight: 600;
+
+}
+
+.product .card>div {
+    padding: 0 10%;
+}
+
+.product .card .price {
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    background-color: rgba(236, 239, 241, .7);
+    padding         : 1rem;
+    margin          : 0;
+    overflow        : hidden;
+    border-radius   : 30px 0 30px 0;
+    font-weight     : bold;
+}

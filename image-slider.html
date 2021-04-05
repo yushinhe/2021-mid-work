@@ -14,18 +14,18 @@
         }
 
         .container {
-            width: 320px;
-            height: 165px;
+            max-width: 750px;
+            height: 500px;
             margin: 30px auto;
             position: relative;
         }
 
-        .image-container-before {
+        #image-container-before {
             width: 160px;
         }
 
-        .image-container-before,
-        .image-container-after {
+        #image-container-before,
+        #image-container-after {
             position: absolute;
             height: 100%;
         }
@@ -42,49 +42,50 @@
             height: 100%;
             position: absolute;
             top: 0;
-            left: 100px;
+            left: 50%;
             transform: translateX(-50%);
             z-index: 20;
             pointer-events: none;
+        }
+
+        h4 {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: black;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="image-container-after">
-            <img class="after" src="./active-img/active2.png" alt="">
+        <div id="image-container-after">
+            <img class="before" src="./active-img/last-supper-4997322_1280.png" alt="">
         </div>
-        <div class="image-container-before">
-            <img class="before" src="./active-img/active3.png" alt="">
+        <div id="image-container-before">
+            <img class="after" src="./active-img/last-supper-gray.png" alt="">
         </div>
         <div class="slider"></div>
     </div>
     <script>
         const slider = document.querySelector('.slider')
-        const before = document.querySelector('.image-container-before')
-        const after = document.querySelector('.image-container-after')
         const container = document.querySelector(".container")
         const dragyoass = (e) => {
+            let before = document.querySelector('#image-container-before')
+            let after = document.querySelector('#image-container-after')
             let xPos = e.layerX;
-            console.log(xPos);
             let size = container.offsetWidth;
-            console.log(size);
-            console.log(slider.style.left);
             before.style.width = xPos + "px";
-            console.log(before.style.width);
             slider.style.left = xPos + "px";
-            if (xPos < 5) {
+            if (xPos < 50) {
                 before.style.width = 0;
                 slider.style.left = 0;
             }
-            if (xPos + 5 > size) {
+            if (xPos + 50 > size) {
                 before.style.width = size + "px";
                 slider.style.left = size + "px";
             }
         }
-        console.log(slider.style.left);
-
         container.addEventListener("mousemove", dragyoass)
     </script>
 </body>
