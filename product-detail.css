@@ -113,6 +113,9 @@
     display              : grid;
     grid-template-columns: repeat(3, 1fr) 4fr;
     gap                  : 30px;
+    margin-bottom        : .5rem;
+    border-bottom        : 2px solid var(--lightblue);
+
 }
 
 .intro .intro-tab li {
