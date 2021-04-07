@@ -122,7 +122,7 @@
         let amount = document.getElementById('amount')
         let subtraction = document.getElementById('subtraction')
         let plus = document.getElementById('plus')
-        console.log();
+        if (amount.value <= 1) subtraction.disabled = true;
         function amountSub() {
             amount.value--;
             if (amount.value < 5) plus.disabled = false;
