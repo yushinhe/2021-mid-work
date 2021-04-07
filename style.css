@@ -427,7 +427,7 @@
     background-attachment: fixed;
     display              : flex;
     align-items          : center;
-    background-size      : cover;
+    background-size      : cover;    
 }
 
 .slogan .bg {

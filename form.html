@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ask */
+        .ask form {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-action {
+            position: relative;
+            width: 50%;
+        }
+
+        .form-action input {
+            width: 100%;
+            padding: .5rem;
+            font-size: 16px;
+            outline: 0;
+            border: 0;
+            border-bottom: var(--second-background-color) 3px solid;
+            margin: .5rem 0;
+        }
+
+        .form-action label {
+            position: absolute;
+            left: 0;
+            bottom: .5rem;
+            padding: .5rem;
+            transition: .5s;
+        }
+
+        .form-action input:focus~label,
+        .form-action input:valid~label {
+            bottom: 32px;
+            font-size: 14px;
+            color: var(--blue);
+
+        }
+
+        .form-action input:focus~label {
+            color: var(--blue);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="ask">
+        <div class="container">
+            <h2>有話想說</h2>
+            <div class="contact">
+
+            </div>
+            <form action="">
+                <div class="form-action">
+                    <input type="text" id="name" required>
+                    <label for="name">姓名</label>
+                </div>
+                <div class="form-action">
+                    <input type="email" id="email" required>
+                    <label for="email">電子信箱</label>
+                </div>
+                <div class="form-action">
+                    <input type="tel" id="phone" required>
+                    <label for="phone">電話</label>
+                </div>
+                <div class="form-action">
+                    <textarea name="" id="opinion" cols="30" rows="10" required></textarea>
+                    <label for="opinion">意見</label>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

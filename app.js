@@ -7,14 +7,17 @@ let nav = document.querySelector('.main-nav')
 window.addEventListener('scroll', console.log('hi'))
 
 // log inface
-let toLog = document.getElementById('to-log')
-let log = document.getElementById('log')
-let modalClose = document.querySelector('.modal-close')
-function logInterface() {
-    log.classList.add('active')
-}
-function closeModal() {
-    log.classList.remove('active')
-}
-toLog.addEventListener('click', logInterface);
-modalClose.addEventListener('click', closeModal)
+// let toLog = document.getElementById('to-log')
+// let log = document.getElementById('log')
+// let modalClose = document.querySelector('.modal-close')
+// function logInterface() {
+//     log.classList.add('active')
+// }
+// function closeModal() {
+//     log.classList.remove('active')
+// }
+// toLog.addEventListener('click', logInterface);
+// modalClose.addEventListener('click', closeModal)
+// banner-out
+tl.to('.banner .bg', { x: "100%", duration: 1, delay: 0.5 })
+tl.from('.banner h2', { y: "50px", opacity:0, duration: 1, stagger: .25 })
