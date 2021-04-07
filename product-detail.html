@@ -18,7 +18,7 @@
 <body>
     <section class="product-info">
         <div class="container grid">
-            <img src="./product-img/book2.jpg" alt="">
+            <img src="./product-img/book2.jpg" id="hi" alt="">
             <div class="info-group">
                 <h2>器物的象徵:佛教打造的中國物質世界</h2>
                 <h3>作者:柯嘉豪</h3>
@@ -108,6 +108,8 @@
             </p>
     </section>
     <script>
+        let hi=document.querySelector('#hi');
+        console.log(hi.src);
         // collect
         let like = document.querySelector('.like')
         console.log(like.innerHTML);
