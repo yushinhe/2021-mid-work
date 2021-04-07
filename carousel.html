@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item-group {
+            width: 300px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 0px;
+            flex: 1 0 50px;
+        }
+
+        .mumi {
+            width: 50px;
+            height: 50px;
+            background-color: khaki;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item-group">
+        <div class="item" style="background-color: blue;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: purple;"></div>
+        <div class="item" style="background-color: aqua;"></div>
+        <div class="item" style="background-color: brown;"></div>
+        <div class="item" style="background-color: pink;"></div>
+        <div class="item" style="background-color: indigo;"></div>
+        <div class="item" style="background-color: green;"></div>
+    </div>
+    <div class="mumi"></div>
+    <script>
+        let item = document.querySelectorAll('.item');
+        let mumi = document.querySelector('.mumi')
+        let count = 0;
+        mumi.addEventListener('click', () => {
+            count += 1;
+            console.log(count);
+            for (let i = 0; i < item.length; i++) {
+                item[i].style.left = 0 - 50 * count + 'px';
+            }
+        })
+    </script>
+</body>
+
+</html>
