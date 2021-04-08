@@ -6,18 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'
+        integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=='
+        crossorigin='anonymous' />
     <style>
         /* ask */
-        .ask form {
-            padding: 2rem;
+        .container{
+            max-width: 1320px;
+            margin: auto;
+        }
+        .grid {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            background: aquamarine;
+        }
+
+        .info-group {
+            padding: 2rem;
+            height: 80%;
+            transform: translate(1rem, 1rem);
+            background-color: white;
+           
+        }
+
+        .ask form {
+            padding: 2rem 5rem;
+            background-color: blue;
+            flex: 1 0 0;
         }
 
         .form-action {
             position: relative;
-            width: 50%;
+            width: 100%;
         }
 
         .form-action input {
@@ -26,10 +45,14 @@
             font-size: 16px;
             outline: 0;
             border: 0;
-            border-bottom: var(--second-background-color) 3px solid;
-            margin: .5rem 0;
+            border-bottom: #e7ecef 3px solid;
+            margin-top: 3rem;
+            background-color: transparent;
         }
-
+        .form-action textarea{
+            width: 100%;
+            margin-top: 3rem;
+        }
         .form-action label {
             position: absolute;
             left: 0;
@@ -43,7 +66,6 @@
             bottom: 32px;
             font-size: 14px;
             color: var(--blue);
-
         }
 
         .form-action input:focus~label {
@@ -56,27 +78,40 @@
     <section class="ask">
         <div class="container">
             <h2>有話想說</h2>
-            <div class="contact">
-
+            <div class="grid">
+                <div class="info-group">
+                    <div class="info">
+                        <h3><i class="fas fa-map-marker-alt"></i>地址</h3>
+                        <p>桃園市中壢區復興路46號</p>
+                    </div>
+                    <div class="info">
+                        <h3><i class="fas fa-phone"></i>電話</h3>
+                        <p>03-425-1108</p>
+                    </div>
+                    <div class="info">
+                        <h3><i class="fas fa-clock"></i>營業時間</h3>
+                        <p>週日 - 四 / 10 : 30 - 22 : 00 <br>週五 - 六 / 10 : 30 - 22 : 30</p>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="form-action">
+                        <input type="text" id="name" required>
+                        <label for="name">姓名</label>
+                    </div>
+                    <div class="form-action">
+                        <input type="email" id="email" required>
+                        <label for="email">電子信箱</label>
+                    </div>
+                    <div class="form-action">
+                        <input type="tel" id="phone" required>
+                        <label for="phone">電話</label>
+                    </div>
+                    <div class="form-action">
+                        <textarea name="" id="opinion" cols="30" rows="10" required></textarea>
+                        <label for="opinion">意見</label>
+                    </div>
+                </form>
             </div>
-            <form action="">
-                <div class="form-action">
-                    <input type="text" id="name" required>
-                    <label for="name">姓名</label>
-                </div>
-                <div class="form-action">
-                    <input type="email" id="email" required>
-                    <label for="email">電子信箱</label>
-                </div>
-                <div class="form-action">
-                    <input type="tel" id="phone" required>
-                    <label for="phone">電話</label>
-                </div>
-                <div class="form-action">
-                    <textarea name="" id="opinion" cols="30" rows="10" required></textarea>
-                    <label for="opinion">意見</label>
-                </div>
-            </form>
         </div>
     </section>
 </body>

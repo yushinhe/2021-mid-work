@@ -7,66 +7,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        form {
-            margin: 100px;
+        * {
+            margin: 0;
+            padding: 0;
         }
 
-        .input-field {
-            position: relative;
-            width: 250px;
-            height: 44px;
-            line-height: 44px;
+        .box {
+            position: fixed;
+            left: 50%;
+            width: 0;
+            height: 100vh;
+            background: aqua;
+            transition: .5s;
         }
 
-        label {
-            position: absolute;
+        .img {
+            position: fixed;
             top: 0;
-            left: 0;
-            width: 100%;
-            color: #d3d3d3;
-            transition: 0.2s all;
-            cursor: text;
+            width: 50%;
+            height: 0;
+            background: black;
+            transition: .5s;
+            left: 50%;
         }
 
-        input {
-            width: 100%;
-            border: 0;
-            outline: 0;
-            padding: 0.5rem 0;
-            border-bottom: 2px solid #d3d3d3;
-            box-shadow: none;
-            color: #111;
+        .info {
+            position: fixed;
+            top: 50%;
+            width: 50%;
+            height: 0;
+            background: blue;
+            transition: .5s;
+            left: 50%;
+
         }
 
-        input:invalid {
-            outline: 0;
+        .img.active,
+        .info.active {
+            height: 50vh;
         }
 
-        input:focus,
-        input:valid {
-            border-color: #00dd22;
+        .box.active {
+            left: 0%;
+            width: 50%;
         }
 
-  
-        input:valid~label {
-            font-size: 14px;
-            top: -24px;
-            color: #00dd22;
+        button {
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
 
 <body>
-    <form action="">
-        <div class="input-field">
-            <input type="text" id="name" value="123" required />
-            <label for="name">Your name:</label>
-            <div id="mumi">123</div>
-        </div>
-    </form>
+
+    <div class="box item"></div>
+    <div class="img item"></div>
+    <div class="info item"></div>
+    <button>按下</button>
+    <button>關閉</button>
     <script>
-        let name= document.getElementById('mumi')
-        console.log(name.innerText);
+        let item = document.querySelectorAll('.item')
+        let btn = document.querySelectorAll('button')
+        item.forEach(e => {
+            btn[0].addEventListener('click', () => {
+                console.log('hi');
+                e.classList.add('active');
+            })
+            btn[1].addEventListener('click', () => {
+                console.log('hi');
+                e.classList.remove('active');
+            })
+        })
     </script>
 </body>
 

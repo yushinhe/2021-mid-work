@@ -273,7 +273,7 @@
         let introTitle = document.querySelectorAll('.intro-title')
         let introContent = document.querySelectorAll('.intro-content')
         for (let i = 0; i < introTitle.length; i++) {
-            introTitle[i].addEventListener('mousemove', () => {
+            introTitle[i].addEventListener('click', () => {
                 introTitle.forEach((e) =>
                     e.classList.remove('active')
                 )
