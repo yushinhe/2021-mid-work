@@ -58,14 +58,14 @@
     color   : black;
 }
 
-.hero .icon i {
+.icon i {
     padding   : 10px 10px 0;
     font-size : 40px;
     transform : translate(0);
     transition: .25s;
 }
 
-.hero .icon i:hover {
+.icon i:hover {
     color    : #6190E8;
     transform: translateY(-50%);
 }
@@ -141,13 +141,13 @@
 /* service */
 .service {
     background-color: #e7ecef;
-    padding: 0;
+    padding         : 0;
 }
 
 .service .item-group {
     display              : grid;
     grid-template-columns: repeat(3, 1fr);
-    gap:30px;
+    gap                  : 30px;
 }
 
 .service .item {
@@ -163,18 +163,22 @@
 .service .item h3 {
     text-align: center;
 }
-.service .item ul{
-    padding-top:1rem ;
+
+.service .item ul {
+    padding-top: 1rem;
 }
-.service .item li{
-   padding: .5rem 0 0;
-   font-size: 18px;
-   list-style-type:square;
-   position: relative;
+
+.service .item li {
+    padding        : .5rem 0 0;
+    font-size      : 18px;
+    list-style-type: square;
+    position       : relative;
 }
-.service .item+ .service .item{
+
+.service .item+.service .item {
     border-left: 1px black dotted;
 }
+
 /* knowledge */
 
 .knowledge .grid {
@@ -233,14 +237,16 @@
 
 .knowledge h2,
 .recommand h2,
-.active h2 {
+.active h2,
+.contact h2 {
     position     : relative;
     margin-bottom: 1.5rem;
 }
 
 .knowledge h2::before,
 .recommand h2::before,
-.active h2::before {
+.active h2::before,
+.contact h2::before {
     content         : "";
     position        : absolute;
     bottom          : -.5rem;
@@ -252,7 +258,8 @@
 
 .knowledge h2::after,
 .recommand h2::after,
-.active h2::after {
+.active h2::after,
+.contact h2::after {
     content          : "";
     position         : absolute;
     bottom           : -.9rem;
@@ -427,7 +434,7 @@
     background-attachment: fixed;
     display              : flex;
     align-items          : center;
-    background-size      : cover;    
+    background-size      : cover;
 }
 
 .slogan .bg {
@@ -452,4 +459,39 @@
 
 .slogan h4 {
     font-size: 24px;
+}
+
+/* contact */
+.contact {
+    margin-bottom: 60px;
+}
+
+.contact .info-and-form {
+    align-items: center;
+    padding    : 30px;
+}
+
+.info-group {
+    padding         : 2rem 3rem;
+    height          : 80%;
+    transform       : translate(3rem, 1rem);
+    background-color: var(--second-background-color);
+}
+
+.info-group>* {
+    padding: .5rem 0;
+}
+
+.info-group .info>* {
+    padding: .25rem 0;
+}
+
+.contact form {
+    padding         : 2rem 5rem;
+    background-color: white;
+    flex            : 1 0 0;
+}
+
+.form-action {
+    width: 100%;
 }

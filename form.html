@@ -11,21 +11,22 @@
         crossorigin='anonymous' />
     <style>
         /* ask */
-        .container{
+        .contact {
             max-width: 1320px;
             margin: auto;
         }
-        .grid {
+
+        .flex {
             display: flex;
             background: aquamarine;
+            align-items: center;
         }
 
         .info-group {
             padding: 2rem;
             height: 80%;
-            transform: translate(1rem, 1rem);
+            transform: translate(3rem, 1rem);
             background-color: white;
-           
         }
 
         .ask form {
@@ -39,33 +40,50 @@
             width: 100%;
         }
 
-        .form-action input {
+        .form-action input,
+        .form-action textarea {
             width: 100%;
             padding: .5rem;
             font-size: 16px;
             outline: 0;
             border: 0;
             border-bottom: #e7ecef 3px solid;
-            margin-top: 3rem;
+            margin-top:2rem;
             background-color: transparent;
         }
-        .form-action textarea{
-            width: 100%;
-            margin-top: 3rem;
-        }
-        .form-action label {
+
+        .form-action textarea~label,
+        .form-action input~label {
             position: absolute;
             left: 0;
-            bottom: .5rem;
             padding: .5rem;
             transition: .5s;
         }
 
+        .form-action textarea~label {
+            top: 2rem;
+        }
+        .form-action input~label {
+           bottom: .5rem;
+        }
+
+        .form-action input:focus~label,
+        .form-action input:valid~label,
+        .form-action textarea:focus~label,
+        .form-action textarea:valid~label {
+            font-size: 14px;
+            color: var(--blue);
+        }
+
+        .form-action textarea:focus~label,
+        .form-action textarea:valid~label {
+            top:.5rem;
+        }
+
+
         .form-action input:focus~label,
         .form-action input:valid~label {
             bottom: 32px;
-            font-size: 14px;
-            color: var(--blue);
         }
 
         .form-action input:focus~label {
@@ -75,21 +93,22 @@
 </head>
 
 <body>
-    <section class="ask">
+    <section class="contact">
         <div class="container">
-            <h2>有話想說</h2>
-            <div class="grid">
+            <h2>聯絡我們</h2>
+            <div class="flex">
                 <div class="info-group">
+                    <h3>聯絡方式</h3>
                     <div class="info">
-                        <h3><i class="fas fa-map-marker-alt"></i>地址</h3>
+                        <h4><i class="fas fa-map-marker-alt"></i>&nbsp;地址</h4>
                         <p>桃園市中壢區復興路46號</p>
                     </div>
                     <div class="info">
-                        <h3><i class="fas fa-phone"></i>電話</h3>
+                        <h4><i class="fas fa-phone"></i>&nbsp;電話</h4>
                         <p>03-425-1108</p>
                     </div>
                     <div class="info">
-                        <h3><i class="fas fa-clock"></i>營業時間</h3>
+                        <h4><i class="fas fa-clock"></i>&nbsp;營業時間</h4>
                         <p>週日 - 四 / 10 : 30 - 22 : 00 <br>週五 - 六 / 10 : 30 - 22 : 30</p>
                     </div>
                 </div>
@@ -99,17 +118,18 @@
                         <label for="name">姓名</label>
                     </div>
                     <div class="form-action">
-                        <input type="email" id="email" required>
+                        <input type="text" id="email" required>
                         <label for="email">電子信箱</label>
                     </div>
                     <div class="form-action">
-                        <input type="tel" id="phone" required>
-                        <label for="phone">電話</label>
+                        <input type="text" id="title" required>
+                        <label for="title">主題</label>
                     </div>
                     <div class="form-action">
                         <textarea name="" id="opinion" cols="30" rows="10" required></textarea>
                         <label for="opinion">意見</label>
                     </div>
+                    <button type="submit">送出</button>
                 </form>
             </div>
         </div>

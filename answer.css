@@ -110,31 +110,3 @@
     width   : 50%;
 }
 
-.form-action input {
-    padding      : .5rem;
-    font-size    : 16px;
-    outline      : 0;
-    border       : 0;
-    border-bottom: var(--second-background-color) 3px solid;
-    margin       : .5rem 0;
-}
-
-.form-action label {
-    position  : absolute;
-    left      : 0;
-    bottom    : 0;
-    padding   : .5rem;
-    transition: .5s;
-}
-
-.form-action input:focus~label,
-.form-action input:valid~label {
-    bottom   : 32px;
-    font-size: 14px;
-    color    : var(--blue);
-
-}
-
-.form-action input:focus~label {
-    color: var(--blue);
-}

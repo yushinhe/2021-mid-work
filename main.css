@@ -35,10 +35,13 @@
 .main-footer ul {
     text-align: center;
 }
-
+.main-footer li {
+   padding: .5rem 0;
+}
 .main-footer ul a {
     font-size: 24px;
 }
+
 .main-footer>p {
     padding: 10px;
 }
