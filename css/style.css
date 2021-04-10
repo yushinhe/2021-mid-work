@@ -119,7 +119,7 @@
 
 #intro .intro-txt {
     width      : 30%;
-    font-weight: bolder;
+    font-weight: 500;
     color      : rgb(60, 60, 60);
     font-size  : 36px;
 }

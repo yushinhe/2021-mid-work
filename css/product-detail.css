@@ -1,4 +1,6 @@
-.product-info {}
+.product-info {
+    padding-top: 100px;
+}
 
 .product-info .grid {
     grid-template-columns: 2fr 3fr;
@@ -7,8 +9,6 @@
 .product-info .info-group {
     padding: 30px;
 }
-
-.product-info .img-group {}
 
 .product-info .img-group img {
     width  : 80%;
@@ -56,7 +56,7 @@
 }
 
 .product-info .item.active {
-    border: 1px solid var(--eye-catching-red);
+    border: 2px solid var(--eye-catching-red);
 }
 
 .product-info .info-group h2,
@@ -152,7 +152,7 @@
     position       : absolute;
     top            : 0;
     left           : 0;
-    background     : url(./img/product-detail-bg.jpg);
+    background     : url(../img/product-detail-bg.jpg);
     background-size: cover;
     opacity        : .8;
     z-index        : -1;
@@ -172,7 +172,7 @@
     font-size       : 20px;
     color           : var(--blue);
     background-color: var(--second-background-color);
-    padding         : .5rem 1rem;
+    padding         : .75rem 1rem;
     text-align      : center;
     cursor          : pointer;
 }
@@ -197,6 +197,38 @@
 
 .intro-content.active {
     display: block;
+}
+
+/* maybe */
+.maybe {
+    margin-bottom: 30px;
+}
+
+.maybe h2 {
+    position     : relative;
+    margin-bottom: 1.5rem;
+}
+
+.maybe h2::before {
+    content         : "";
+    position        : absolute;
+    bottom          : -.5rem;
+    left            : -30%;
+    background-color: #b2b2b2;
+    height          : 3px;
+    width           : 50%;
+}
+
+.maybe h2::after {
+    content          : "";
+    position         : absolute;
+    bottom           : -.9rem;
+    left             : 19.9%;
+    background-color : #b2b2b2;
+    height           : 15px;
+    width            : 15px;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path        : polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 /* swiper */
