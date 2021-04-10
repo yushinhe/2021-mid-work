@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'
+        integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=='
+        crossorigin='anonymous' />
+    <title>Document</title>
+    <style>
+        .wrapper {
+            max-width: 1320px;
+            margin: auto;
+        }
+
+        .recommand h2 {
+            position: relative;
+        }
+
+        .recommand h2::before {
+            content: "";
+            position: absolute;
+            left: -50%;
+            bottom: -.5rem;
+            width: 68%;
+            height: 2px;
+            background-color: black;
+        }
+
+        .recommand h2::after {
+            content: "";
+            position: absolute;
+            left: 17.5%;
+            bottom: -.75rem;
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        /* 一個 */
+
+
+        .recommand .card-group {
+            padding: 0 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+        }
+
+        .recommand .card-group .detail-info {}
+
+        .recommand .card {
+            position: relative;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr;
+            color: black;
+            text-decoration: black;
+        }
+
+        .recommand .card img {
+            width: 100%;
+        }
+
+        .recommand .card-group .detail-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* 3個一排 */
+        .recommand .card-group.active {
+            padding: 0 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        .recommand .card-group.active img {
+            width: 60%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .recommand .card-group.active .card {
+            display: block;
+        }
+
+        .recommand .card-group.active .toBuy {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .recommand .card-group.active h3 {
+            margin: .5rem;
+        }
+
+        .recommand .card-group.active .detail-info {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="recommand">
+        <div class="wrapper">
+            <h2 style="font-size: 48px;">暢銷熱賣</h2>
+            <button><i class="fas fa-th" id="more"></i></button>
+            <button><i class="fas fa-align-justify" id="one"></i></button>
+            <div class="card-group">
+                <a href="#" class="card">
+                    <img src="./product-img/book2.png" alt="">
+                    <div class="info">
+                        <h3>器物的象徵: 佛教打造的中國物質世界</h3>
+                        <div class="detail-info">
+                            <h4>作者:柯嘉豪</h4>
+                            <h4>出版社:遠足文化事業股份有限公司</h4>
+                            <h4>出版日期:2020/12/23</h4>
+                        </div>
+                    </div>
+                    <div class="toBuy">
+                        <p class="price">$300</p>
+                        <div style="display: flex;">
+                            <div class="like"><i class="far fa-heart"></i> 加入收藏</div>
+                            <div class="btn btn-red"><i class="fas fa-shopping-cart"></i> 加入購物車</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <img src="./product-img/book2.png" alt="">
+                    <div class="info">
+                        <h3>器物的象徵: 佛教打造的中國物質世界</h3>
+                        <p class="price">$300</p>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <img src="./product-img/book2.png" alt="">
+                    <div class="info">
+                        <h3>器物的象徵: 佛教打造的中國物質世界</h3>
+                        <p class="price">$300</p>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <img src="./product-img/book2.png" alt="">
+                    <div class="info">
+                        <h3>器物的象徵: 佛教打造的中國物質世界</h3>
+                        <p class="price">$300</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+        let more = document.getElementById('more')
+        let one = document.getElementById('one')
+        let cardGroup = document.querySelector('.card-group')
+        more.addEventListener('click', clickMore)
+        function clickMore() {
+            cardGroup.classList.add('active')
+        }
+    </script>
+</body>
+
+</html>

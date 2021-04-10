@@ -184,7 +184,7 @@
 .knowledge .grid {
     display              : grid;
     grid-template-columns: repeat(2, 1fr);
-    background           : url(./img/product-detail-bg.jpg);
+    background           : url(../img/product-detail-bg.jpg);
     padding              : 1rem 2rem;
     margin               : 30px 0 60px;
     border-radius        : 2px;
@@ -425,12 +425,19 @@
     color     : var(--secondary-text-color);
 }
 
+.active .btn {
+    display: block;
+    margin : 0 auto;
+    width:130px;
+    text-align: center;
+}
+
 /* slogan */
 .slogan {
     width                : 100%;
     position             : relative;
     height               : 300px;
-    background           : url(./img/bible-839093_1920.png);
+    background           : url(../img/bible-839093_1920.png);
     background-attachment: fixed;
     display              : flex;
     align-items          : center;

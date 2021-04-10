@@ -1,39 +1,16 @@
+/* banner */
 .banner {
-    width          : 100%;
-    height         : 540px;
-    position       : relative;
-    background     : url(../img/test.png) center center;
-    background-size: cover;
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-    overflow       : hidden;
-    padding        : 0;
+    background: url(../img/test.png) center center;
 }
 
 .banner .bg {
-    position       : absolute;
-    top            : 0;
-    left           : 0;
-    width          : 100%;
-    height         : 100%;
-    filter         : blur(5px);
-    background     : url(../img/test.png) center center;
-    background-size: cover;
-
+    background: url(../img/test.png) center center;
 }
 
-.banner h2 {
-    text-shadow   : 0px 0px 5px #000;
-    color         : white;
-    font-size     : 80px;
-    letter-spacing: .5em;
-    font-weight   : 600;
-}
 
 .product-page {
     display              : grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 2fr 7fr;
     margin-top           : 60px;
 }
 
@@ -87,91 +64,201 @@
     padding-top: 0;
 }
 
-.product .card-group {
-    padding              : 30px;
-    display              : grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap                  : 60px;
+/* recommand */
+.recommand {
+    padding-top: 0;
 }
 
-.product .card {
-    border-radius   : 30px;
-    box-shadow      : 0px 20px 20px rgba(0, 0, 0, .2), 0px 0px 50px rgba(0, 0, 0, .2);
-    position        : relative;
-    padding         : 1rem;
-    transition      : 1s;
-    overflow        : hidden;
-    display         : block;
-    color           : black;
-    text-decoration : none;
-    background-color: rgba(255, 255, 255, .2);
-}
-
-.product .card::before {
-    content         : '';
-    background-color: #A7BFE8;
-    position        : absolute;
-    top             : -50%;
-    left            : 0;
-    width           : 101%;
-    height          : 100%;
-    z-index         : -1;
-    transform       : skewY(165deg);
-    transition      : .5s;
-}
-
-.product .card:hover::before {
-    top      : -70%;
-    transform: skewY(210deg);
-}
-
-.product .card img {
-    width  : 60%;
-    display: block;
-    margin : 0 auto;
-}
-
-.product .card h5 {
-    margin     : .5rem;
-    font-weight: 600;
-
-}
-
-.product .card>div {
-    padding: 0 10%;
-}
-
-.product .card .price {
-    position        : absolute;
-    top             : 0;
-    left            : 0;
-    background-color: rgba(236, 239, 241, .7);
-    padding         : 1rem;
-    margin          : 0;
-    overflow        : hidden;
-    border-radius   : 30px 0 30px 0;
-    font-weight     : bold;
-}
-
-/* pagination */
-.pagination {
-    margin         : 30px auto;
+.recommand .toggle {
     display        : flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-bottom  : 1rem;
 }
 
-.pagination a {
-    color          : black;
-    float          : left;
-    padding        : 8px 16px;
+.recommand .toggle .btn {
+    font-size       : 14px;
+    margin          : 0 .5rem;
+    padding         : 0.5rem;
+    color           : black;
+    background-color: white;
+    cursor          : pointer;
+    border-radius   : 2px;
+}
+
+.recommand .toggle .btn.active {
+    background-color: black;
+    color           : white;
+    cursor          : pointer;
+}
+
+/* 一個 */
+.recommand .card-group {
+    padding              : 0 30px;
+    display              : grid;
+    grid-template-columns: 1fr;
+}
+
+.recommand .card-group .detail-info {
+    margin: 0.5rem;
+}
+
+.recommand .card-group .card {
+    position             : relative;
+    display              : grid;
+    grid-template-columns: 2fr 7fr 3fr;
+    color                : black;
+    text-decoration      : black;
+    border-bottom        : 2px var(--second-background-color) solid;
+}
+
+.recommand .card .info,
+.recommand .card-group.active .info {
     text-decoration: none;
 }
 
-.pagination a.active {
-    background-color: var(--dark-background-color);
-    color           : white;
+.recommand .card-group .card>* {
+    padding: 1rem;
 }
 
-.pagination a:hover:not(.active) {
+.recommand .card img {
+    width     : 100%;
+    transition: .5s;
+}
+
+.recommand .card-group h3 {
+    font-weight: 600;
+    margin     : .5rem;
+    transition : .5s;
+}
+
+.recommand .card-group .card:hover h3 {
+    color: var(--dark-blue);
+}
+
+.recommand .card-group .detail-info {
+    display  : flex;
+    flex-wrap: wrap;
+}
+
+.recommand .card-group .detail-info>* {
+    margin: 0.25rem;
+}
+
+.recommand .card-group .price {
+    color    : var(--eye-catching-red);
+    font-size: 24px;
+}
+
+.recommand .card-group .toBuy>* {
+    margin-bottom: .5rem;
+}
+
+.recommand .card-group .btn {
+    font-size  : 16px;
+    padding    : 5px 12px;
+    display    : flex;
+    align-items: center;
+    height     : 34px;
+    width      : 140px;
+}
+
+.recommand .card-group .buy {
+    visibility: hidden;
+    position  : absolute;
+}
+
+.recommand .card-group .btn>* {
+    padding: 0 .25rem;
+}
+
+/* 3個一排 */
+.recommand .card-group.active .card {
+    border-bottom: transparent;
+    transition   : .5s;
+    border-radius: 20px;
+    overflow     : hidden;
+}
+
+.recommand .card-group.active .card:hover {
     background-color: var(--second-background-color);
 }
+
+.recommand .card-group.active {
+    gap                  : 30px;
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.recommand .card-group.active .product-img {
+    overflow: hidden;
+    display : block;
+
+}
+
+.recommand .card-group.active img {
+    width     : 70%;
+    display   : block;
+    margin    : 0 auto;
+    transition: .5s;
+}
+
+.recommand .card-group img:hover {
+    transform: scale(1.2);
+}
+
+.recommand .card-group.active .card {
+    display: block;
+}
+
+.recommand .card-group.active .card .info {
+    padding: 0 1rem;
+}
+
+.recommand .card-group.active .toBuy {
+    display        : flex;
+    justify-content: space-between;
+    padding        : 0 2rem;
+}
+
+.recommand .card-group.active .detail-info {
+    display: none;
+}
+
+.recommand .card-group.active .btn {
+    visibility: hidden;
+}
+
+.recommand .card-group.active .buy {
+    visibility: visible;
+    bottom    : 0px;
+    right     : 0px;
+    width     : 70px;
+    height    : 70px;
+    border    : transparent;
+    clip-path : circle(50% at 76% 83%);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.recommand .card-group.active .buy i {
+    position : absolute;
+    top      : 40px;
+    left     : 40px;
+    font-size: 20px;
+}
+
+.recommand .card-group.active .buy:hover {
+    clip-path       : none;
+    width           : 100%;
+    height          : 45px;
+    background-color: var(--dark-blue);
+}
+
+.recommand .card-group.active .buy:hover i {
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+    color    : white;
+}
+

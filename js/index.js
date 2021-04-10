@@ -1,5 +1,5 @@
-   // swiper
-   var swiper = new Swiper('.swiper-container', {
+// swiper
+var swiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
@@ -20,3 +20,4 @@
         el: '.swiper-pagination',
     },
 });
+//changeHTML

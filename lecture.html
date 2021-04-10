@@ -19,12 +19,12 @@
 <body>
     <header class="main-header">
         <nav class="main-nav container d-flex justify-content-between">
-            <a class="d-flex" href="#">
+            <a class="d-flex" href="./index.html">
                 <h1 class="hide-text title">太公望書林</h1>
                 <img src="./img/logo4.png" class="logo" alt="">
             </a>
             <ul class="d-flex align-items-center">
-                <li><a class="text-decoration-none " href="#">來讀書吧</a></li>
+                <li><a class="text-decoration-none " href="./product-list.html">來讀書吧</a></li>
                 <li><a class="text-decoration-none " href="#">講座介紹</a></li>
                 <!-- <li><a class="text-decoration-none" href="#">好文分享</a></li> -->
                 <li class="list-unstyled" id="to-log"><i class="far fa-user "></i></li>
@@ -146,7 +146,7 @@
                 </div>
                 <div class="form-action">
                     <label for="person">參加人數</label>
-                    <select>
+                    <select required>
                         <option id="person" selected>請選擇人數</option>
                         <option value="1">1位</option>
                         <option value="2">2位</option>
@@ -154,7 +154,7 @@
                     </select>
                 </div>
                 <div class="btn-group">
-                    <button type="submit" class="btn btn-blue">送出</button>
+                    <button id="submit" type="submit" class="btn btn-blue">送出</button>
                     <button type="reset" class="reset-btn">重新填寫</button>
                 </div>
 
