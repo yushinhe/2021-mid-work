@@ -23,7 +23,7 @@
     overflow        : hidden;
     cursor          : pointer;
     transition      : .5s;
-    font-weight: 600;
+    font-weight     : 600;
 }
 
 .word .word-menu li.active {
@@ -85,9 +85,9 @@
 }
 
 .grid-item .btn {
-    font-size: 16px;
-    margin   : 0 auto;
-    display  : block;
-    width: 100px;
+    font-size : 16px;
+    margin    : 0 auto;
+    display   : block;
+    width     : 100px;
     text-align: center;
 }
