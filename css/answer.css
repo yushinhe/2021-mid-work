@@ -24,10 +24,11 @@
 
 .answer h3 {
     font-size: 18px;
+    font-weight: 600;
 }
 
 .answer .according-head {
-    background: var(--lighter-blue);
+    background: var(--second-background-color);
     padding   : 1rem 1.5rem;
     position  : relative;
     cursor    : pointer;
@@ -51,7 +52,7 @@
 
 .answer .according-content {
     width: 100%;
-    background-color: var(--second-background-color);
+    background-color: white;
 }
 
 .answer .according-content p {

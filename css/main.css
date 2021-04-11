@@ -20,10 +20,6 @@
     transition  : .5s;
 }
 
-.main-header li:hover {
-    list-style: none;
-}
-
 .main-header li:hover a {
     border-bottom: 2px solid black;
 }
