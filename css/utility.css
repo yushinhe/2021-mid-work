@@ -169,13 +169,15 @@ p {
 }
 
 .btn-gray {
-    background-color: #b2b2b2;
+    background-color: var(--dark-background-color);
     transition      : background-color .5s;
+    color: black;
 }
 
 .btn-gray:hover,
 .btn-gray:focus {
-    background-color: var(--eye-catching-red);
+    background-color: var(--darker-background-color);
+    color: white;
 }
 
 .btn-red {
