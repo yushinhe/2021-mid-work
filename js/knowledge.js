@@ -7,6 +7,6 @@ let button=document.querySelectorAll('button')
 console.log(button);
 button.forEach(e=>{
     e.addEventListener('click',()=>{
-        window.location.href ="../article.html"
+        window.location.href ="./article.html"
     })
 })
