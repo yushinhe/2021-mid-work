@@ -88,4 +88,6 @@
     font-size: 16px;
     margin   : 0 auto;
     display  : block;
+    width: 100px;
+    text-align: center;
 }
