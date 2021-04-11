@@ -31,7 +31,9 @@
 .hero p {
     margin: 1rem 0;
 }
-
+.hero h2{
+    font-weight: 600;
+}
 .hero p {
     font-size  : 18px;
     font-weight: normal;
@@ -132,6 +134,7 @@
     transform: translateY(100%);
     opacity  : 0;
     display  : inline-block;
+    font-weight: 600;
 }
 
 #intro .hide:nth-of-type(3) {
@@ -374,7 +377,12 @@
 .active .card-info {
     padding-top: 1rem;
 }
-
+.active .card-info>*{
+    margin: .25rem 0;
+}
+.active .card-info h3{
+    font-weight: 600;
+}
 .active .card:hover {
     transform : perspective(2000px)rotate(0deg) translateX(3rem);
     box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5);

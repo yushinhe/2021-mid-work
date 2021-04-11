@@ -53,6 +53,10 @@
     padding: 0.5rem 0;
 }
 
+.news .intro h3 {
+    font-weight: 600;
+}
+
 .news .apply-and-know,
 .news .date,
 .lecture-detail .lecture-date {
@@ -196,7 +200,8 @@
 }
 
 .lecture-detail .lecture-info h3 {
-    font-size: 36px;
+    font-size  : 36px;
+    font-weight: 600;
 }
 
 .lecture-detail .lecture-info h4 {
@@ -278,6 +283,10 @@
     opacity   : 1;
 }
 
+.form-action:nth-of-type(4) {
+    margin-top: 1rem;
+}
+
 .form-action input,
 .form-action select {
     margin-top: 1.5rem;
@@ -289,11 +298,11 @@
 }
 
 .form-action select {
-    border          : 0;
-    border-bottom   : 2px solid var(--primary-background-color);
+    border       : transparent;
+    border-bottom: var(--second-background-color) 3px solid;
     background-color: transparent;
     padding         : 0 .5rem;
-    text-align      : center;
+    margin          : 0 1rem;
 }
 
 .form-action select :focus {

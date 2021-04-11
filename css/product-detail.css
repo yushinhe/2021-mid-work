@@ -119,6 +119,7 @@
     display    : flex;
     align-items: center;
     height     : 34px;
+    cursor: pointer;
 }
 
 .product-info .like {
@@ -248,6 +249,7 @@
     display                : -ms-flexbox;
     display                : -webkit-flex;
     display                : flex;
+    cursor: pointer;
     flex-direction         : column;
     -webkit-box-pack       : center;
     -ms-flex-pack          : center;

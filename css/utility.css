@@ -217,7 +217,7 @@ input::-webkit-inner-spin-button {
     font-size       : 16px;
     outline         : 0;
     border          : 0;
-    border-bottom   : #e7ecef 3px solid;
+    border-bottom   : var(--second-background-color) 3px solid;
     margin-top      : 2.5rem;
     background-color: transparent;
 }
