@@ -7,14 +7,63 @@
     background: url(../img/about-us\ bg.jpg) center center;
 }
 
-.story h2,
-.idea h2 {
+.toggle-menu ul {
+    display              : grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.toggle-menu ul li {
+    font-size : 24px;
+    padding   : 1rem 2rem;
+    text-align: center;
+    position  : relative;
+    overflow  : hidden;
+}
+
+.toggle-menu ul li:not(.active):before {
+    content         : "";
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: var(--dark-blue);
+    display         : block;
+    z-index         : -1;
+    transform       : translateX(-100%);
+    transition      : .5s;
+}
+
+.toggle-menu ul li:hover::before {
+    transform: translateX(0%);
+}
+
+.toggle-menu ul li.active a {
+    color: var(--dark-blue);
+}
+
+.toggle-menu ul li:not(.active):hover a {
+    color: white;
+}
+
+.toggle-menu ul li+li {
+    border-left: 2px var(--dark-background-color) solid;
+}
+
+.toggle-menu ul li a {
+    text-decoration: none;
+}
+
+.history {
+    padding: 60px 0;
+}
+
+.history h2 {
     position     : relative;
     margin-bottom: 1.5rem;
 }
 
-.story h2::before,
-.idea h2::before {
+.history h2::before {
     content         : "";
     position        : absolute;
     bottom          : -.5rem;
@@ -23,9 +72,8 @@
     height          : 3px;
     width           : 45%;
 }
-.idea h2::after,
-.story h2::after
- {
+
+.history h2::after {
     content          : "";
     position         : absolute;
     bottom           : -.9rem;
@@ -37,3 +85,80 @@
     clip-path        : polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
+.history .timeline {
+    width: 100%;
+}
+
+.history .timeline li {
+    width                : 100%;
+    display              : grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.history .time {
+    border-right: 2px solid var(--dark-background-color);
+    text-align  : right;
+}
+
+.history .time,
+.timeline .things {
+    padding: 2rem 3rem;
+}
+
+.history .time .year {
+    position: relative;
+}
+
+.history .time .year h3 {
+    font-size: 80px;
+    color    : var(--darker-background-color);
+}
+
+.history .year::after {
+    content         : "";
+    position        : absolute;
+    top             : 50%;
+    right           : -49px;
+    transform       : translate(50%, -50%);
+    background-color: var(--dark-background-color);
+    width           : 10px;
+    height          : 10px;
+    border-radius   : 50%;
+    display         : block;
+    z-index         : 5;
+}
+
+.timeline li:nth-of-type(even) {
+    background: var(--second-background-color);
+}
+
+.timeline .things figure,
+.timeline .things p {
+    width : 80%;
+    margin: 0 auto;
+}
+
+.timeline .things figure>*,
+.timeline .things p {
+    padding: 1rem;
+}
+
+.timeline .things figcaption,
+.history .time .year-thing,
+.timeline .things p {
+    font-size  : 24px;
+    line-height: 1.3;
+}
+
+.timeline .things figcaption,
+.timeline .things p {
+    font-weight: 400;
+}
+
+.history .time .year-thing {
+    font-weight: 600;
+}
+
+.timeline .things img {
+    width: 100%;
+}

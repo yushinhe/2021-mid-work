@@ -1,6 +1,7 @@
 /* banner */
 .banner {
     background: url(../img/eagle1.jpg) center center;
+    margin-top: 64px;
 }
 
 main {
@@ -73,18 +74,14 @@ article p {
     text-indent  : 2em;
     margin-bottom: 2rem;
 }
-
-.big-pic {
-    display              : grid;
-    grid-template-columns: 4fr 1fr;
+.big-pic img{
+    width: 100%;
 }
-
 .big-pic figcaption {
     margin-top : .5rem;
     padding-top: 1rem;
     line-height: 1.5em;
     font-size  : 18px;
-    border-top : 2px var(--eye-catching-red) solid;
 }
 
 .famous-saying {
@@ -182,7 +179,7 @@ article p {
 
 .change-page {
     background-color: var(--second-background-color);
-    padding: 60px 0;
+    padding         : 60px 0;
 }
 
 .change-page .item-group {
@@ -206,24 +203,29 @@ article p {
 }
 
 .change-page .item i {
-    font-size: 20px;
+    font-size : 20px;
     transition: .5s;
 }
-.change-page .toPage{
+
+.change-page .toPage {
     transform: translateY(-25px);
 }
-.change-page .toPage>*{
+
+.change-page .toPage>* {
     padding: .5rem 0;
 }
-.change-page .toPage span{
-    font-size: 12px;
+
+.change-page .toPage span {
+    font-size  : 12px;
     font-weight: 300;
-    color: var( --darker-background-color );
+    color      : var(--darker-background-color);
 }
-.change-page .toPage h3{
-    font-size: 28px;
+
+.change-page .toPage h3 {
+    font-size  : 28px;
     font-weight: 500;
 }
+
 .change-page .item:nth-of-type(1):hover i {
     transform: translateX(-30px);
 }
