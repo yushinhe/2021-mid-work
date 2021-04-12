@@ -216,7 +216,7 @@ input::-webkit-inner-spin-button {
 .form-action textarea {
     width           : 100%;
     padding         : .5rem;
-    font-size       : 16px;
+    font-size       : 18px;
     outline         : 0;
     border          : 0;
     border-bottom   : var(--second-background-color) 3px solid;
@@ -230,7 +230,7 @@ input::-webkit-inner-spin-button {
     left      : 0;
     padding   : .5rem;
     transition: .5s;
-    font-size : 1.5rem;
+    font-size : 1.4rem;
 }
 
 .form-action textarea~label {
@@ -246,7 +246,7 @@ input::-webkit-inner-spin-button {
 .form-action textarea:focus~label,
 .form-action textarea:valid~label {
     padding  : .5rem 0;
-    font-size: 1.3125rem;
+    font-size: 1.28rem;
     color    : var(--eye-catching-red);
 }
 
