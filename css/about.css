@@ -54,35 +54,15 @@
     text-decoration: none;
 }
 
+@media screen and (max-width:768px) {
+    .toggle-menu ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
 .history {
     padding: 60px 0;
-}
-
-.history h2 {
-    position     : relative;
-    margin-bottom: 1.5rem;
-}
-
-.history h2::before {
-    content         : "";
-    position        : absolute;
-    bottom          : -.5rem;
-    left            : -30%;
-    background-color: #b2b2b2;
-    height          : 3px;
-    width           : 45%;
-}
-
-.history h2::after {
-    content          : "";
-    position         : absolute;
-    bottom           : -.9rem;
-    left             : 14.9%;
-    background-color : #b2b2b2;
-    height           : 15px;
-    width            : 15px;
-    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    clip-path        : polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .history .timeline {
@@ -161,4 +141,62 @@
 
 .timeline .things img {
     width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .section-title::before {
+        width: 70%;
+    }
+
+    .section-title::after {
+        left: 39.5%;
+    }
+
+    .history .timeline {
+        position: relative;
+    }
+
+    .history .timeline::before {
+        content         : "";
+        position        : absolute;
+        top             : 0;
+        left            : 24px;
+        height          : 100%;
+        width           : 2px;
+        background-color: var(--dark-background-color);
+    }
+
+    .history .year::after {
+        left: -33px;
+    }
+
+    .history .year-thing {
+        text-indent: .5em;
+    }
+
+    .history .timeline li {
+        display              : grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+
+    .history .time {
+        border-right: transparent;
+        text-align  : left;
+    }
+
+    .history .time,
+    .timeline .things {
+        padding: 1rem 3rem;
+    }
+
+    .timeline .things figure>*,
+    .timeline .things p {
+        padding: .5rem .5em;
+    }
+
+    .timeline .things figure,
+    .timeline .things p {
+        width: 100%;
+    }
 }

@@ -14,6 +14,12 @@
     margin-top           : 60px;
 }
 
+@media screen and (max-width:768px) {
+    .product-page {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* sidebar */
 .sidebar {
     position: sticky;
@@ -50,10 +56,19 @@
     font-size: 20px;
 }
 
+@media screen and (max-width:768px) {
+    .sidebar {
+        position: static;
+    }
+
+    .sidebar .form-group {
+        width    : 100%;
+        display  : flex;
+        flex-wrap: wrap;
+    }
+}
+
 /* product */
-
-
-
 .product h2 {
     position     : relative;
     margin-bottom: 1.5rem;
@@ -103,12 +118,24 @@
 }
 
 .recommand .card-group .card {
-    position             : relative;
-    display              : grid;
-    grid-template-columns: 2fr 7fr 3fr;
-    color                : black;
-    text-decoration      : black;
-    border-bottom        : 2px var(--second-background-color) solid;
+    position           : relative;
+    display            : grid;
+    grid-template-areas: 'g g g f f f f f f f b b b';
+    color              : black;
+    text-decoration    : black;
+    border-bottom      : 2px var(--second-background-color) solid;
+}
+
+.recommand .card-group .product-img {
+    grid-area: g
+}
+
+.recommand .card-group .info {
+    grid-area: f
+}
+
+.recommand .card-group .toBuy {
+    grid-area: b
 }
 
 .recommand .card .info,
@@ -116,7 +143,7 @@
     text-decoration: none;
 }
 
-.recommand .card-group .card>* {
+.recommand  .card>* {
     padding: 1rem;
 }
 
@@ -140,7 +167,7 @@
     flex-wrap: wrap;
 }
 
-.recommand .card-group .detail-info>* {
+.recommand .detail-info h4 {
     margin: 0.25rem;
 }
 
@@ -151,6 +178,9 @@
 
 .recommand .card-group .toBuy>* {
     margin-bottom: .5rem;
+}
+.recommand .card .product-img {
+    padding:0;
 }
 
 .recommand .card-group .btn {
@@ -171,7 +201,40 @@
     padding: 0 .25rem;
 }
 
+@media screen and (max-width:768px) {
+    .recommand .card-group .card {
+        grid-template-areas:
+            "g f"
+            "g b";
+            grid-template-columns: repeat(2,1fr);
+    }
+
+    .recommand .card .detail-info {
+        margin: 0;
+    }
+
+    .recommand .card-group h3,
+    .recommand .card-group h4 {
+        font-size: 16px;
+        margin   : 0;
+    }
+
+    .recommand .card .detail-info h4:not(.author) {
+        display: none;
+    }
+
+    .recommand .card-group .toBuy {
+        padding: 0 1rem;
+    }
+}
+
 /* 3個一排 */
+.recommand .card-group.active {
+    gap                  : 30px;
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .recommand .card-group.active .card {
     border-bottom: transparent;
     transition   : .5s;
@@ -183,12 +246,6 @@
     background-color: var(--second-background-color);
 }
 
-.recommand .card-group.active {
-    gap                  : 30px;
-    display              : grid;
-    grid-template-columns: repeat(3, 1fr);
-
-}
 
 .recommand .card-group.active .product-img {
     overflow: hidden;
@@ -238,7 +295,7 @@
     border    : transparent;
     clip-path : circle(50% at 76% 83%);
     transition: .5s;
-    cursor: pointer;
+    cursor    : pointer;
 }
 
 .recommand .card-group.active .buy i {
@@ -262,3 +319,13 @@
     color    : white;
 }
 
+/* 手機時2個一排 */
+@media screen and (max-width:768px) {
+    .recommand .card-group.active {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recommand .card-group.active img {
+        width: 100%;
+    }
+}

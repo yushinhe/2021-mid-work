@@ -6,6 +6,13 @@
     grid-template-columns: 2fr 3fr;
 }
 
+@media screen and (max-width:768px) {
+    .product-info .grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
 .product-info .info-group {
     padding: 30px;
 }
@@ -53,6 +60,12 @@
     width   : 100px;
     padding : 0 .5rem;
     position: relative;
+}
+
+@media screen and (max-width:768px) {
+    .product-info .img-group .second-img {
+        width: 350px;
+    }
 }
 
 .product-info .item.active {
@@ -119,7 +132,7 @@
     display    : flex;
     align-items: center;
     height     : 34px;
-    cursor: pointer;
+    cursor     : pointer;
 }
 
 .product-info .like {
@@ -249,7 +262,7 @@
     display                : -ms-flexbox;
     display                : -webkit-flex;
     display                : flex;
-    cursor: pointer;
+    cursor                 : pointer;
     flex-direction         : column;
     -webkit-box-pack       : center;
     -ms-flex-pack          : center;
