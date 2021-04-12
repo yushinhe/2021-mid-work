@@ -15,11 +15,14 @@
 
 .news .item {
     grid-template-columns: 2fr 6fr 1fr;
+    grid-template-areas  : 'd i a';
+    gap                  : 2rem;
     border-bottom        : 2px solid var(--dark-background-color);
 }
 
+
 .news .item>* {
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 .news .intro>* {
@@ -41,6 +44,11 @@
 
 .news .apply-and-know {
     flex-direction: column;
+    grid-area     : a;
+}
+
+.news .intro {
+    grid-area: i;
 }
 
 .news .date {
@@ -49,6 +57,7 @@
     background-color: transparent;
     display         : inline-block;
     overflow        : hidden;
+    grid-area       : d;
 }
 
 .news .date span {
@@ -82,6 +91,41 @@
 .news .btn {
     text-align: center;
     margin    : .5rem 0;
+}
+
+@media screen and (max-width:768px) {
+
+    .news .item {
+        grid-template-rows   : 1fr fr;
+        grid-template-columns: auto;
+        grid-template-areas  :
+            'd i i'
+            'a i i';
+    }
+
+    .news .item>* {
+        padding: 0;
+    }
+
+    .news .apply-and-know {
+        justify-content: flex-start;
+    }
+
+    .news .btn {
+        text-align: center;
+        margin    : .5rem 0;
+        /* width  : 100px; */
+        padding   : 1rem;
+    }
+
+    .news .date {
+        padding-top: 1rem;
+        font-size  : 12px;
+    }
+
+    .news .date span {
+        font-size: 30px;
+    }
 }
 
 /* lecture-detail */
@@ -165,6 +209,7 @@
     height          : 100%;
     background-color: var(--darker-background-color);
     color           : white;
+    grid-area       : i;
 }
 
 .lecture-detail .lecture-info>* {
@@ -206,6 +251,7 @@
     height         : 0%;
     background     : url(../active-img/active1.png);
     background-size: cover;
+    grid-area      : p;
 }
 
 
@@ -225,6 +271,26 @@
 
 .lecture-detail .lecture-date p span {
     font-size: 100px;
+}
+
+@media screen and (max-width:768px) {
+    .lecture-detail.active {
+        position: fixed;
+        top     : 0%;
+        left    : 0;
+        overflow: auto;
+    }
+
+    .lecture-detail.active .lecture-info {
+        width : 100%;
+        height: auto;
+    }
+
+    .lecture-detail.active .lecture-pic,
+    .lecture-detail.active .lecture-date {
+        display: none;
+    }
+
 }
 
 /* apply-form */
@@ -328,11 +394,11 @@
     }
 
     .apply-form-content {
-        height: 100%;
-        top             : 0%;
-        left            : 0%;
-        transform       : none;     
-        padding         : 3rem;
-        border-radius   : 3px;
+        height       : 100%;
+        top          : 0%;
+        left         : 0%;
+        transform    : none;
+        padding      : 3rem;
+        border-radius: 3px;
     }
 }
