@@ -29,26 +29,29 @@ section {
 }
 
 .hide-text {
-    display    : block;
     overflow   : hidden;
     text-indent: 100%;
     white-space: nowrap;
-    font-size  : 0px;
+    width      : 0;
+    height     : 0;
 }
 
 a {
     color: black;
+    text-decoration: none;
 }
 
 .container {
     max-width: 1320px;
     margin   : 0 auto;
 }
+
 @media screen and (max-width:768px) {
     .container {
-    padding: 0 .75rem;
+        padding: 0 .75rem;
     }
 }
+
 .list-unstyled {
     list-style: none;
 }
@@ -78,9 +81,7 @@ a {
     gap    : 20px;
 }
 
-.text-decoration-none {
-    text-decoration: none;
-}
+
 
 .text-center {
     text-align: center;
@@ -175,13 +176,13 @@ p {
 .btn-gray {
     background-color: var(--dark-background-color);
     transition      : background-color .5s;
-    color: black;
+    color           : black;
 }
 
 .btn-gray:hover,
 .btn-gray:focus {
     background-color: var(--darker-background-color);
-    color: white;
+    color           : white;
 }
 
 .btn-red {

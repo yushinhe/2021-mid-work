@@ -23,7 +23,14 @@
 .main-header li:hover a {
     border-bottom: 2px solid black;
 }
-
+@media screen and (max-width:768px) {
+    .logo {
+        padding: 6px .5rem;       
+    }
+    .nav-menu{
+        display: none;
+    }
+}
 /* footer */
 .main-footer {
     background-color: var(--dark-background-color);
@@ -58,7 +65,6 @@
     overflow       : hidden;
     padding        : 0;
 }
-
 .banner .bg {
     position       : absolute;
     top            : 0;
@@ -78,7 +84,7 @@
 }
 
 @media screen and (max-width:768px) {
-    .banner h2 {
+     .banner h2 {
         font-size: 48px;
     }
 }

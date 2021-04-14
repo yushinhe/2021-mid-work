@@ -17,6 +17,12 @@
     background: url(../img/knowledge.jpg) center center;
 }
 
+@media screen and (max-width:768px) {
+    .banner {
+        background-size: cover;
+    }
+}
+
 /* word */
 .word .word-menu {
     width                : 100%;
