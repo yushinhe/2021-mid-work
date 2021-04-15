@@ -7,12 +7,13 @@ let nav = document.querySelector('.main-nav')
 window.addEventListener('scroll', console.log('hi'))
 
 // menu
-// let menuBtn = document.querySelector('.menu-btn')
-// console.log(menuBtn);
-// menuBtn.addEventListener('click', toggleMenu)
-// function toggleMenu() {
-//     menuBtn.classList.toggle('active')
-// }
+let menuBtn = document.querySelector('.menu-btn')
+let subMenu = document.querySelector('.sub-menu')
+menuBtn.addEventListener('click', toggleMenu)
+function toggleMenu() {
+    menuBtn.classList.toggle('active')
+    subMenu.classList.toggle('active')
+}
 
 // log inface
 // let toLog = document.getElementById('to-log')
