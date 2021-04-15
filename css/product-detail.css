@@ -118,11 +118,17 @@
 }
 
 .product-info .price-buy {
-    display: flex;
+    display              : grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas  :
+        'p l b'
+    ;
+    gap: 30px;
 }
 
-.product-info .price-buy>* {
-    margin: 0 2rem 0 0;
+.product-info .info-group .price {
+    margin-bottom: 0;
+    grid-area    : p;
 }
 
 .product-info .btn,
@@ -135,6 +141,10 @@
     cursor     : pointer;
 }
 
+.product-info .btn {
+    grid-area: b;
+}
+
 .product-info .like {
     color          : var(--eye-catching-red);
     border         : 1px solid var(--eye-catching-red);
@@ -142,6 +152,7 @@
     text-decoration: none;
     border-radius  : 2px;
     transition     : .5s;
+    grid-area      : l;
 }
 
 .product-info i {
@@ -151,6 +162,17 @@
 .product-info .like:hover {
     background-color: var(--eye-catching-red);
     color           : #fff;
+}
+
+@media screen and (max-width:768px) {
+    .product-info .price-buy {
+        display              : grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows   : repeat(2, 1fr);
+        grid-template-areas  :
+            'p .'
+            'l b';
+    }
 }
 
 .slogan {
@@ -179,7 +201,6 @@
     gap                  : 30px;
     margin-bottom        : .5rem;
     border-bottom        : 2px solid var(--lightblue);
-
 }
 
 .intro .intro-title {
@@ -211,6 +232,17 @@
 
 .intro-content.active {
     display: block;
+}
+
+@media screen and (max-width:768px) {
+    .intro .intro-tab {
+        grid-template-columns: repeat(3, 1fr);
+        gap                  : 10px;
+    }
+
+    .intro .intro-title {
+        padding: .75rem 0;
+    }
 }
 
 /* maybe */
@@ -280,4 +312,10 @@
 
 .swiper-slide .info>* {
     padding: .5rem 0;
+}
+
+@media screen and (max-width:768px) {
+    .swiper-slide {
+        margin: 0;
+    }
 }
