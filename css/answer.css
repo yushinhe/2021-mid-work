@@ -1,11 +1,12 @@
 /* banner */
 .banner img {
-    position: absolute;
-    top     : 0;
-    left    : 0;
-    width   : 100%;
-    overflow: hidden;
-    filter  : brightness(0.5);
+    position  : absolute;
+    background: url(../img/ask-bg.jpg) center center;
+    top       : 0;
+    left      : 0;
+    width     : 100%;
+    overflow  : hidden;
+    filter    : brightness(0.5);
 }
 
 .banner .bg {
@@ -23,7 +24,7 @@
 }
 
 .answer h3 {
-    font-size: 18px;
+    font-size  : 18px;
     font-weight: 600;
 }
 
@@ -51,7 +52,7 @@
 }
 
 .answer .according-content {
-    width: 100%;
+    width           : 100%;
     background-color: white;
 }
 

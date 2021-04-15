@@ -1,6 +1,6 @@
 /* .banner */
 .banner {
-    background: url(../img/knowledge.jpg);
+    background: url(../img/knowledge.jpg) center center;
 }
 
 .banner .mask {
