@@ -58,6 +58,10 @@
     .toggle-menu ul {
         grid-template-columns: repeat(2, 1fr);
     }
+    .toggle-menu ul li:nth-of-type(3) {
+        border-left: transparent;
+    }
+    
 
 }
 

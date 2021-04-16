@@ -7,6 +7,15 @@
     background: url(../img/test.png) center center;
 }
 
+@media screen and (max-width:768px) {
+    .banner {
+        background-position: 30% 30%;
+    }
+
+    .banner .bg {
+        background-position: 30% 30%;
+    }
+}
 
 .product-page {
     display              : grid;
@@ -143,7 +152,7 @@
     text-decoration: none;
 }
 
-.recommand  .card>* {
+.recommand .card>* {
     padding: 1rem;
 }
 
@@ -179,8 +188,9 @@
 .recommand .card-group .toBuy>* {
     margin-bottom: .5rem;
 }
+
 .recommand .card .product-img {
-    padding:0;
+    padding: 0;
 }
 
 .recommand .card-group .btn {
@@ -206,7 +216,7 @@
         grid-template-areas:
             "g f"
             "g b";
-            grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .recommand .card .detail-info {

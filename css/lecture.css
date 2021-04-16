@@ -7,6 +7,15 @@
     background: url(../img/lecture-bg.jpg) center center;
 }
 
+@media screen and (max-width:768px) {
+    .banner {
+        background-position: 15% 15%;
+    }
+
+    .banner .bg {
+        background-position: 15% 15%;
+    }
+}
 
 /* news */
 .news {
@@ -114,13 +123,13 @@
     .news .btn {
         text-align: center;
         margin    : .5rem 0;
-        width  : 100px;
-        padding   :.5rem;
+        width     : 100px;
+        padding   : .5rem;
     }
 
     .news .date {
         padding-top: 1rem;
-        font-size  :20px;
+        font-size  : 20px;
     }
 
     .news .date span {
@@ -294,7 +303,8 @@
     .lecture-detail.active .lecture-info {
         transform: translate(0, 0);
     }
-    .lecture-detail.active .lecture-date{
+
+    .lecture-detail.active .lecture-date {
         display: none;
     }
 }
