@@ -115,7 +115,6 @@
     cursor          : pointer;
 }
 
-/* 一個 */
 .recommand .card-group {
     padding              : 0 30px;
     display              : grid;
@@ -126,6 +125,13 @@
     margin: 0.5rem;
 }
 
+@media screen and (max-width:768px) {
+    .recommand .card-group {
+        padding: 0px;
+    }
+}
+
+/* 一個 */
 .recommand .card-group .card {
     position           : relative;
     display            : grid;
@@ -225,8 +231,15 @@
 
     .recommand .card-group h3,
     .recommand .card-group h4 {
+        margin: 0;
+    }
+
+    .recommand .card-group h3 {
+        font-size: 18px;
+    }
+
+    .recommand .card-group h4 {
         font-size: 16px;
-        margin   : 0;
     }
 
     .recommand .card .detail-info h4:not(.author) {
