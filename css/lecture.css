@@ -96,11 +96,11 @@
 @media screen and (max-width:768px) {
 
     .news .item {
-        grid-template-rows   : 1fr fr;
-        grid-template-columns: auto;
+        grid-template-rows   : 1fr 2fr;
+        grid-template-columns: 2fr 3fr;
         grid-template-areas  :
-            'd i i'
-            'a i i';
+            'd i '
+            'a i ';
     }
 
     .news .item>* {
@@ -114,17 +114,17 @@
     .news .btn {
         text-align: center;
         margin    : .5rem 0;
-        /* width  : 100px; */
-        padding   : 1rem;
+        width  : 100px;
+        padding   :.5rem;
     }
 
     .news .date {
         padding-top: 1rem;
-        font-size  : 12px;
+        font-size  :20px;
     }
 
     .news .date span {
-        font-size: 30px;
+        font-size: 40px;
     }
 }
 
