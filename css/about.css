@@ -59,6 +59,9 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .toggle-menu ul li:nth-of-type(3) {
+        border-left: transparent;
+    }
 }
 
 .history {
@@ -106,6 +109,12 @@
     height          : 10px;
     border-radius   : 50%;
     z-index         : 5;
+}
+
+@media screen and (max-width:768px) {
+    .history {
+        padding: 60px 0 0;
+    }
 }
 
 .timeline li:nth-of-type(even) {
@@ -171,13 +180,13 @@
     }
 
     .history .year-thing {
-        text-indent: .5em;
+        padding-left: .5em;
     }
 
     .history .timeline li {
         display              : grid;
         grid-template-columns: 1fr;
-        gap: 0px;
+        gap                  : 0px;
     }
 
     .history .time {

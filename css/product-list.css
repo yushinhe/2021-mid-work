@@ -7,6 +7,15 @@
     background: url(../img/test.png) center center;
 }
 
+@media screen and (max-width:768px) {
+    .banner {
+        background-position: 30% 30%;
+    }
+
+    .banner .bg {
+        background-position: 30% 30%;
+    }
+}
 
 .product-page {
     display              : grid;
@@ -106,7 +115,6 @@
     cursor          : pointer;
 }
 
-/* 一個 */
 .recommand .card-group {
     padding              : 0 30px;
     display              : grid;
@@ -117,6 +125,13 @@
     margin: 0.5rem;
 }
 
+@media screen and (max-width:768px) {
+    .recommand .card-group {
+        padding: 0px;
+    }
+}
+
+/* 一個 */
 .recommand .card-group .card {
     position           : relative;
     display            : grid;
@@ -143,7 +158,7 @@
     text-decoration: none;
 }
 
-.recommand  .card>* {
+.recommand .card>* {
     padding: 1rem;
 }
 
@@ -179,8 +194,9 @@
 .recommand .card-group .toBuy>* {
     margin-bottom: .5rem;
 }
+
 .recommand .card .product-img {
-    padding:0;
+    padding: 0;
 }
 
 .recommand .card-group .btn {
@@ -206,7 +222,7 @@
         grid-template-areas:
             "g f"
             "g b";
-            grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .recommand .card .detail-info {
@@ -215,8 +231,15 @@
 
     .recommand .card-group h3,
     .recommand .card-group h4 {
+        margin: 0;
+    }
+
+    .recommand .card-group h3 {
+        font-size: 18px;
+    }
+
+    .recommand .card-group h4 {
         font-size: 16px;
-        margin   : 0;
     }
 
     .recommand .card .detail-info h4:not(.author) {

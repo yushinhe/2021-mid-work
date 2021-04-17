@@ -24,7 +24,11 @@ h1 {
     font-size   : 20px;
     transition  : .5s;
 }
-
+.main-nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
 .main-header li:hover a {
     border-bottom: 2px solid black;
 }
@@ -106,7 +110,7 @@ h1 {
         transform       : translateX(-100%);
         transition      : .5s;
         justify-content : center;
-        align-items     : center;
+        align-items   : center;
     }
 
     .sub-menu li {
