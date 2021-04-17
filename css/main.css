@@ -9,9 +9,14 @@
     box-shadow      : 0 2px 3px rgb(128, 128, 128);
 }
 
-.logo {
-    padding: 6px 16px;
-    height : 60px;
+h1 {
+    overflow        : hidden;
+    width           : 197.3px;
+    height          : 60px;
+    background-size : contain;
+    background-image: url(../img/logo4.svg);
+    text-indent     : 101%;
+    white-space     : nowrap;
 }
 
 .main-header li a {
