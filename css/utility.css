@@ -38,15 +38,12 @@ a {
     margin   : 0 auto;
 }
 
-<<<<<<< HEAD
-=======
+
 @media screen and (max-width:768px) {
     .container {
         padding:0 10px;
     }
 }
-
->>>>>>> 389edc4613d5ace2f893b7fbe625d473223d89ef
 .list-unstyled {
     list-style: none;
 }
