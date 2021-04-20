@@ -21,7 +21,7 @@ for (let i = 0; i < item.length; i++) {
         </div>
     </a>
     <div class="toBuy">
-        <p class="price">${item[i].price}</p>
+        <p class="price">$ ${item[i].price}</p>
         <button class="btn btn-red"><i class="fas fa-shopping-cart"></i> 加入購物車</button>
     </div>
     <button class="buy"><i class="fas fa-shopping-cart "></i></button>
