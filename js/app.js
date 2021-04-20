@@ -14,14 +14,7 @@ function toggleMenu() {
     menuBtn.classList.toggle('active')
     subMenu.classList.toggle('active')
 }
-//swiper img
-let swiperWrapper = document.querySelector('.swiper-wrapper')
-let swiperImg = ['book2.png', 'book3.png', 'book4.png', 'book5.png', 'book6.png', 'book7.png']
-let swiperSlide
-for (let i = 0; i < swiperImg.length; i++) {
-    swiperSlide += ` <div class="swiper-slide"><img src="./product-img/${swiperImg[i]}"></div>`
-    swiperWrapper.innerHTML = swiperSlide;
-}
+
 
 // banner-out
 tl.to('.banner .bg', { x: "100%", duration: 1, delay: 0.5 })

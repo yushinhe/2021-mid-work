@@ -12,7 +12,9 @@ body {
 section {
     padding-top: 60px;
 }
-
+u{
+    display: none;
+}
 :root {
     --primary-gradient-background-color: linear-gradient(#6190E8, #A7BFE8);
     --primary-background-color         : rgb(245, 245, 245);
