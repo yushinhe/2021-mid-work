@@ -4,7 +4,23 @@ let one = document.getElementById('one')
 let cardGroup = document.querySelector('.card-group')
 let toggleBtn = document.querySelectorAll('.toggle .btn')
 
-// 迴圈控制商品
+///商品價錢排序
+let priceSort = document.getElementById('price-sort')
+priceSort.addEventListener('change', sortByPrice)
+function sortByPrice() {
+    console.log(priceSort.value);
+    if (priceSort.value == 'asort') {
+        item.sort((a, b) => a.price - b.price)
+    }
+    else {
+        item.sort((a, b) => b.price - a.price)
+    }   
+    console.log(item);
+   return item
+
+}
+
+// 迴圈控制商品出現
 
 let card;
 for (let i = 0; i < item.length; i++) {
