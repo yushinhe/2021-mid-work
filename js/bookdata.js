@@ -8,7 +8,7 @@ export default [
         publingDate: '2020/12/23',
         price: 520,
         quantity: 10,
-        img: '../product-img/book2.png',
+        img: './product-img/book2.png',
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ export default [
         publingDate: '2019/02/14',
         price: 420,
         quantity: 15,
-        img: '../product-img/book1.png',
+        img: './product-img/book1.png',
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ export default [
         publingDate: '2020 / 12 / 29',
         price: 750,
         quantity: 6,
-        img: '../product-img/book4.png',
+        img: './product-img/book4.png',
     }, {
         id: 4,
         name: "征服的時代：從亞歷山大到哈德良的希臘世界",
@@ -40,7 +40,7 @@ export default [
         publingDate: '2021 / 01 / 07',
         price: 800,
         quantity: 8,
-        img: '../product-img/book3.png',
+        img: './product-img/book3.png',
     }, {
         id: 5,
         name: "從臺車到巴士：百年臺灣地方交通演進史",
@@ -50,7 +50,7 @@ export default [
         publingDate: '2020 / 12 / 02',
         price: 450,
         quantity: 10,
-        img: '../product-img/book6.png',
+        img: './product-img/book6.png',
     }, {
         id: 6,
         name: "恐懼與自由: 透過二十五位人物的故事, 了解二次大戰如何改變人類的未來",
@@ -60,7 +60,7 @@ export default [
         publingDate: '2021 / 03 / 06',
         price: 680,
         quantity: 12,
-        img: '../product-img/book7.png',
+        img: './product-img/book7.png',
     }, {
         id: 7,
         name: "被隱藏的帝國:一部發生於美國之外,被忽略的美國史",
@@ -70,7 +70,7 @@ export default [
         publingDate: '2021 / 03 / 11',
         price: 680,
         quantity: 10,
-        img: '../product-img/book9.png',
+        img: './product-img/book9.png',
     }, {
         id: 8,
         name: "斯多葛主義生活: 如何避開焦慮、悲傷、失望、憤怒和不滿的情緒指南",
@@ -80,7 +80,7 @@ export default [
         publingDate: '2020 / 11 / 12',
         price: 290,
         quantity: 13,
-        img: '../product-img/book10.png',
+        img: './product-img/book10.png',
     }, {
         id: 9,
         name: "操控與反操控:德國法律人都在使用的日常修辭邏輯與謬誤偵知法",
@@ -90,7 +90,7 @@ export default [
         publingDate: '2021 / 01 / 27',
         price: 380,
         quantity: 10,
-        img: '../product-img/book11.png',
+        img: './product-img/book11.png',
     }, {
         id: 10,
         name: "哲學與宗教全史:人類三千年的思考之旅",
@@ -100,7 +100,7 @@ export default [
         publingDate: '2020 / 10 / 01',
         price: 430,
         quantity: 4,
-        img: '../product-img/book12.png',
+        img: './product-img/book12.png',
     }, {
         id: 11,
         name: "懲罰的三大思辨: 懲罰是什麼? 為何要懲罰? 懲罰的是誰?",
@@ -110,7 +110,7 @@ export default [
         publingDate: '2019 / 11 / 01',
         price: 380,
         quantity: 7,
-        img: '../product-img/book13.png',
+        img: './product-img/book13.png',
     }, {
         id: 12,
         name: "精神分析引論",
@@ -120,6 +120,6 @@ export default [
         publingDate: '22018/11/28',
         price: 500,
         quantity: 9,
-        img: '../product-img/book13.png',
+        img: './product-img/book13.png',
     }
 ]
