@@ -28,16 +28,8 @@ section {
     --lighter-blue                     : #D2E9FF;
 }
 
-.hide-text {
-    overflow   : hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-    width      : 0;
-    height     : 0;
-}
-
 a {
-    color: black;
+    color          : black;
     text-decoration: none;
 }
 
@@ -46,12 +38,12 @@ a {
     margin   : 0 auto;
 }
 
+
 @media screen and (max-width:768px) {
     .container {
         padding:0 10px;
     }
 }
-
 .list-unstyled {
     list-style: none;
 }
