@@ -3,12 +3,27 @@ let more = document.getElementById('more')
 let one = document.getElementById('one')
 let cardGroup = document.querySelector('.card-group')
 let toggleBtn = document.querySelectorAll('.toggle .btn')
+//篩選
+let priceSort = document.getElementById('price-sort');
+priceSort.addEventListener('change', sortByPrice)
+// item.sort((a, b) => a.price - b.price)
+function sortByPrice() {
+    if (priceSort.value == 'asort') {
+        console.log('hi');
+        item.sort((a, b) => a.price - b.price)
+    }
+
+    if (priceSort.value == 'sort') {
+        item.sort((a, b) => b.price - a.price)
+    }
+    productCard();
+}
 
 // 迴圈控制商品
-
-let card;
-for (let i = 0; i < item.length; i++) {
-    card += `  <div class="card">
+const productCard = () => {
+    let card = "";
+    for (let i = 0; i < item.length; i++) {
+        card += `  <div class="card">
     <a href="./product-detail.html" class="product-img">
         <img src="${item[i].img}" alt="">
     </a>
@@ -26,8 +41,10 @@ for (let i = 0; i < item.length; i++) {
     </div>
     <button class="buy"><i class="fas fa-shopping-cart "></i></button>
 </div>`
-    cardGroup.innerHTML = card;
+        cardGroup.innerHTML = card;
+    }
 }
+productCard();
 
 //切換商品
 more.addEventListener('click', clickMore)
