@@ -120,6 +120,6 @@ export default [
         publingDate: '22018/11/28',
         price: 500,
         quantity: 9,
-        img: './product-img/book13.png',
+        img: './product-img/book14.png',
     }
 ]

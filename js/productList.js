@@ -3,28 +3,36 @@ let more = document.getElementById('more')
 let one = document.getElementById('one')
 let cardGroup = document.querySelector('.card-group')
 let toggleBtn = document.querySelectorAll('.toggle .btn')
-
-///商品價錢排序
-let priceSort = document.getElementById('price-sort')
+//篩選
+let priceSort = document.getElementById('price-sort');
 priceSort.addEventListener('change', sortByPrice)
+// item.sort((a, b) => a.price - b.price)
 function sortByPrice() {
-    console.log(priceSort.value);
     if (priceSort.value == 'asort') {
         item.sort((a, b) => a.price - b.price)
     }
-    else {
+    if (priceSort.value == 'sort') {
         item.sort((a, b) => b.price - a.price)
-    }   
-    console.log(item);
-   return item
-
+    }
+    productCard();
 }
+let history = document.getElementById('history')
+console.log(history.checked);
+history.addEventListener('change', () => {
+    if (history.checked) {
+        console.log('hello');
+        let result = item.filter(item => item.type == '歷史書籍')
+    }
+    productCard();
+})
 
-// 迴圈控制商品出現
 
-let card;
-for (let i = 0; i < item.length; i++) {
-    card += `  <div class="card">
+
+// 迴圈控制商品
+const productCard = () => {
+    let card = "";
+    for (let i = 0; i < item.length; i++) {
+        card += `  <div class="card">
     <a href="./product-detail.html" class="product-img">
         <img src="${item[i].img}" alt="">
     </a>
@@ -42,8 +50,10 @@ for (let i = 0; i < item.length; i++) {
     </div>
     <button class="buy"><i class="fas fa-shopping-cart "></i></button>
 </div>`
-    cardGroup.innerHTML = card;
+        cardGroup.innerHTML = card;
+    }
 }
+productCard();
 
 //切換商品
 more.addEventListener('click', clickMore)
