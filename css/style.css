@@ -30,7 +30,7 @@
 }
 
 @media screen and (max-width:768px) {
-    .hero {       
+    .hero {
         padding: 80px 0;
     }
 
@@ -178,8 +178,16 @@
 }
 
 .service .item {
-    padding: 2rem 4rem;
-    margin : 0 auto;
+    display           : grid;
+    grid-template-rows: 1fr 2fr;
+    gap               :2rem;
+    align-items       : flex-start;
+    justify-content   : center;
+    padding           : 2rem 0;
+}
+
+.service .item .title {
+    margin: 0 auto;
 }
 
 .service .item img {
@@ -191,10 +199,6 @@
 .service .item h3 {
     text-align : center;
     font-weight: 600;
-}
-
-.service .item ul {
-    padding-top: 1rem;
 }
 
 .service .item li {
@@ -212,6 +216,28 @@
 @media screen and (max-width:768px) {
     .service .item-group {
         grid-template-columns: 1fr;
+        gap                  : 0;
+        padding: 1rem 0;
+    }
+
+    .service .item {
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows   :auto;
+        align-items: center;
+        padding    : 0 0 1rem;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .service .item-group {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .service .item {
+        grid-template-columns: 1fr; 
+        gap: .5rem;
+        padding: 0 1rem 0 2rem;  
     }
 }
 
@@ -267,6 +293,10 @@
     .knowledge .grid {
         grid-template-columns: 1fr;
     }
+    
+.knowledge img {
+    width: 100%;
+}
 }
 
 /* recommand */
@@ -363,14 +393,17 @@
 
 @media screen and (max-width:768px) {
     .recommand .card-group {
-        grid-template-columns:repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media screen and (max-width:576px) {
     .recommand .card-group {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+        padding: 10px;
     }
 }
+
 /* activity */
 
 .activity .item-group {
