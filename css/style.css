@@ -14,6 +14,22 @@
     position             : relative;
 }
 
+@media screen and (max-width:1200px) {
+    .hero {
+        height: auto;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (max-width:768px) {
     .hero {
         height : auto;
@@ -529,15 +545,15 @@
 }
 
 @media screen and (max-width:768px) {
-    .contact .info-and-form  {
+    .contact .info-and-form {
         flex-wrap: wrap;
-        padding: 30px 0;
+        padding  : 30px 0;
     }
 
     .info-group {
         width    : 100%;
         height   : auto;
-        padding  : 2rem ;
+        padding  : 2rem;
         transform: none;
     }
 
