@@ -7,7 +7,6 @@
     padding   : 150px 0;
 }
 
-
 .hero .grid {
     grid-template-columns: 2fr 3fr;
     gap                  : 60px;
@@ -31,8 +30,7 @@
 }
 
 @media screen and (max-width:768px) {
-    .hero {
-        height : auto;
+    .hero {       
         padding: 80px 0;
     }
 
@@ -220,7 +218,6 @@
 /* knowledge */
 
 .knowledge .grid {
-    display              : grid;
     grid-template-columns: repeat(2, 1fr);
     background           : url(../img/product-detail-bg.jpg);
     padding              : 1rem 2rem;
@@ -366,10 +363,14 @@
 
 @media screen and (max-width:768px) {
     .recommand .card-group {
-        grid-template-columns: 1fr;
+        grid-template-columns:repeat(2, 1fr);
     }
 }
-
+@media screen and (max-width:576px) {
+    .recommand .card-group {
+        grid-template-columns:1fr;
+    }
+}
 /* activity */
 
 .activity .item-group {
