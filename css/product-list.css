@@ -223,6 +223,7 @@
             "g f"
             "g b";
         grid-template-columns: repeat(2, 1fr);
+        align-items: center;
     }
 
     .recommand .card .detail-info {

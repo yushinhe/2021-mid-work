@@ -12,9 +12,11 @@ body {
 section {
     padding-top: 60px;
 }
-u{
+
+u {
     display: none;
 }
+
 :root {
     --primary-gradient-background-color: linear-gradient(#6190E8, #A7BFE8);
     --primary-background-color         : rgb(245, 245, 245);
@@ -40,12 +42,25 @@ a {
     margin   : 0 auto;
 }
 
+@media screen and (max-width:1200px) {
+    .container {
+        max-width: 1140px;
+        padding  : 0 10px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+}
 
 @media screen and (max-width:768px) {
     .container {
-        padding:0 10px;
+        max-width: 720px;
     }
 }
+
 .list-unstyled {
     list-style: none;
 }
@@ -71,21 +86,12 @@ a {
 }
 
 .grid {
-    display: grid;
-    gap    : 20px;
+    display: grid;  
 }
-
-
 
 .text-center {
     text-align: center;
 }
-
-.m-auto {
-    margin: 0 auto;
-}
-
-/* material-button */
 
 /* font-size */
 

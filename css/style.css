@@ -7,16 +7,30 @@
     padding   : 150px 0;
 }
 
-
 .hero .grid {
     grid-template-columns: 2fr 3fr;
     gap                  : 60px;
     position             : relative;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1200px) {
     .hero {
         height: auto;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hero {
         padding: 80px 0;
     }
 
@@ -164,7 +178,15 @@
 }
 
 .service .item {
-    padding: 2rem 4rem;
+    display           : grid;
+    grid-template-rows: 1fr 2fr;
+    gap               :2rem;
+    align-items       : flex-start;
+    justify-content   : center;
+    padding           : 2rem 0;
+}
+
+.service .item .title {
     margin: 0 auto;
 }
 
@@ -179,16 +201,12 @@
     font-weight: 600;
 }
 
-.service .item ul {
-    padding-top: 1rem;
-}
-
 .service .item li {
     padding        : .5rem 0 0;
     font-size      : 18px;
     list-style-type: square;
     position       : relative;
-    line-height: 1.5;
+    line-height    : 1.5;
 }
 
 .service .item+.service .item {
@@ -198,13 +216,34 @@
 @media screen and (max-width:768px) {
     .service .item-group {
         grid-template-columns: 1fr;
+        gap                  : 0;
+        padding: 1rem 0;
+    }
+
+    .service .item {
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows   :auto;
+        align-items: center;
+        padding    : 0 0 1rem;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .service .item-group {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .service .item {
+        grid-template-columns: 1fr; 
+        gap: .5rem;
+        padding: 0 1rem 0 2rem;  
     }
 }
 
 /* knowledge */
 
 .knowledge .grid {
-    display              : grid;
     grid-template-columns: repeat(2, 1fr);
     background           : url(../img/product-detail-bg.jpg);
     padding              : 1rem 2rem;
@@ -254,6 +293,10 @@
     .knowledge .grid {
         grid-template-columns: 1fr;
     }
+    
+.knowledge img {
+    width: 100%;
+}
 }
 
 /* recommand */
@@ -350,7 +393,14 @@
 
 @media screen and (max-width:768px) {
     .recommand .card-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:576px) {
+    .recommand .card-group {
         grid-template-columns: 1fr;
+        padding: 10px;
     }
 }
 
@@ -529,16 +579,23 @@
 }
 
 @media screen and (max-width:768px) {
-    .info-and-form {
+    .contact .info-and-form {
         flex-wrap: wrap;
+        padding  : 30px 0;
     }
 
     .info-group {
-        transform: none;
         width    : 100%;
         height   : auto;
+        padding  : 2rem;
+        transform: none;
     }
+
+    .icon {
+        justify-content: center;
+    }
+
     .contact form {
-        padding         :1rem;
-        }
+        padding: 1rem;
+    }
 }

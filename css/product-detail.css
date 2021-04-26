@@ -67,7 +67,11 @@
         width: 350px;
     }
 }
-
+@media screen and (max-width:576px) {
+    .product-info .img-group .second-img {
+        width:250px;
+    }
+}
 .product-info .item.active {
     border: 2px solid var(--eye-catching-red);
 }

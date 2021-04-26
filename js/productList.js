@@ -16,17 +16,7 @@ function sortByPrice() {
     }
     productCard();
 }
-//類型篩選
-let history = document.getElementById('history')
-console.log(history.checked ? true : false);
-let philosophy = document.getElementById('philosophy')
-let contemporary = document.getElementById('contemporary')
-let result = ''
-if (history.checked) {
-    result = item.filter(item => item.type == '歷史書籍')
-    console.log(result);
-}
-// 迴圈控制商品
+
 const productCard = () => {
     let card = "";
     for (let i = 0; i < item.length; i++) {
