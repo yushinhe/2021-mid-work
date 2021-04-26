@@ -6,8 +6,7 @@
 .banner .bg {
     background: url(../img/test.png) center center;
 }
-
-@media screen and (max-width:768px) {
+@media screen and (max-width:1200px) {
     .banner {
         background-position: 30% 30%;
     }
@@ -16,7 +15,6 @@
         background-position: 30% 30%;
     }
 }
-
 .product-page {
     display              : grid;
     grid-template-columns: 2fr 7fr;

@@ -186,7 +186,11 @@ h1 {
         font-size: 48px;
     }
 }
-
+@media screen and (max-width:576px) {
+    .banner h2 {
+        font-size: 40px;
+    }
+}
 /* section title */
 .section-title {
     position     : relative;
