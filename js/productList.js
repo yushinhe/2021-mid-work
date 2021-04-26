@@ -36,8 +36,7 @@ const productCard = () => {
         <p class="price">$ ${item[i].price}</p>
         <button class="btn btn-red"><i class="fas fa-shopping-cart"></i> 加入購物車</button>
     </div>
-    <button class="buy"><i class="fas fa-shopping-cart "></i></button>
-</div>`
+  </div>`
         cardGroup.innerHTML = card;
     }
 }

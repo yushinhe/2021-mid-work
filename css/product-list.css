@@ -208,11 +208,6 @@
     width      : 140px;
 }
 
-.recommand .card-group .buy {
-    visibility: hidden;
-    position  : absolute;
-}
-
 .recommand .card-group .btn>* {
     padding: 0 .25rem;
 }
@@ -223,7 +218,7 @@
             "g f"
             "g b";
         grid-template-columns: repeat(2, 1fr);
-        align-items: center;
+        align-items          : center;
     }
 
     .recommand .card .detail-info {
@@ -307,7 +302,7 @@
 }
 
 .recommand .card-group.active .btn {
-    visibility: hidden;
+    display: none;
 }
 
 .recommand .card-group.active .buy {
@@ -352,4 +347,9 @@
     .recommand .card-group.active img {
         width: 100%;
     }
+
+    .recommand .card-group.active .toBuy {
+        padding: 0;
+    }
+
 }

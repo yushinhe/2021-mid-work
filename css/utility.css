@@ -295,3 +295,8 @@ input::-webkit-inner-spin-button {
 .pagination a:hover:not(.active) {
     background-color: var(--second-background-color);
 }
+@media screen and (max-width:576px){
+    .pagination a {     
+        padding        : 8px ;      
+    }
+}
