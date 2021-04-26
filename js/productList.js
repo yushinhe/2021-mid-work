@@ -3,22 +3,29 @@ let more = document.getElementById('more')
 let one = document.getElementById('one')
 let cardGroup = document.querySelector('.card-group')
 let toggleBtn = document.querySelectorAll('.toggle .btn')
-//篩選
+//價錢排序
 let priceSort = document.getElementById('price-sort');
 priceSort.addEventListener('change', sortByPrice)
 // item.sort((a, b) => a.price - b.price)
 function sortByPrice() {
     if (priceSort.value == 'asort') {
-        console.log('hi');
         item.sort((a, b) => a.price - b.price)
     }
-
     if (priceSort.value == 'sort') {
         item.sort((a, b) => b.price - a.price)
     }
     productCard();
 }
-
+//類型篩選
+let history = document.getElementById('history')
+console.log(history.checked ? true : false);
+let philosophy = document.getElementById('philosophy')
+let contemporary = document.getElementById('contemporary')
+let result = ''
+if (history.checked) {
+    result = item.filter(item => item.type == '歷史書籍')
+    console.log(result);
+}
 // 迴圈控制商品
 const productCard = () => {
     let card = "";
